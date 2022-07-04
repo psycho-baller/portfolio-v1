@@ -1,36 +1,16 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import {
-  Text,
-  Flex,
-  Box,
-  Spacer,
-  Input,
-  Button,
-  Grid,
-  Wrap,
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-  PopoverArrow,
-  PopoverCloseButton,
-  PopoverHeader,
-  PopoverBody,
-  useToast,
-} from "@chakra-ui/react";
-import styles from '../styles/index.module.scss'
-import HTMLFlipBook from 'react-pageflip';
+import { Text } from "@chakra-ui/react";
+import styles from "../styles/index.module.scss";
+import HTMLFlipBook from "react-pageflip";
 
 import Image from "next/image";
 import Project from "../components/projects";
 import IntroCoverPage from "../components/introCoverPage";
 import OutroCoverPage from "../components/outroCoverPage";
-import projects from "../public/data/projects"
+import projects from "../public/data/projects";
 import AboutMe from "../components/aboutMe";
 export default function Home() {
   return (
     <div>
-      
       {/* @ts-ignore*/}
       <HTMLFlipBook
         width={300}
@@ -71,10 +51,24 @@ export default function Home() {
             alt="cover"
           />
         </IntroCoverPage>
+
         <AboutMe>About Me</AboutMe>
+
+        {/* loop through projects */}
         {projects.map((project, index: number) => (
-          <Project key={index} number={index} name={project.name} image={project.image} github={project.github} website={project.website} description={project.description} tags={project.tags} technologies={project.technologies} />
+          <Project
+            key={index}
+            number={index}
+            name={project.name}
+            image={project.image}
+            github={project.github}
+            website={project.website}
+            description={project.description}
+            tags={project.tags}
+            technologies={project.technologies}
+          />
         ))}
+
         <OutroCoverPage>
           <Image
             src="https://cliparting.com/wp-content/uploads/2018/03/cool-pictures-2018-32.jpg"
