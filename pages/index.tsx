@@ -1,13 +1,17 @@
 import { Text } from "@chakra-ui/react";
 import styles from "../styles/index.module.scss";
 import HTMLFlipBook from "react-pageflip";
-
 import Image from "next/image";
+
+import projects from "../public/data/projects";
+
+// Components:
 import Project from "../components/projects";
 import IntroCoverPage from "../components/introCoverPage";
 import OutroCoverPage from "../components/outroCoverPage";
-import projects from "../public/data/projects";
 import AboutMe from "../components/aboutMe";
+import TableOfContents from "../components/tableOfContents";
+
 export default function Home() {
   return (
     <div>
@@ -22,8 +26,7 @@ export default function Home() {
         maxHeight={1533}
         maxShadowOpacity={0.5}
         // showCover={true}
-        mobileScrollSupport={true}
-        // showCover={true}
+        // mobileScrollSupport={true}
         className="text-center"
         style={{ backgroundColor: "gray" }}
         // startPage={0}
@@ -45,14 +48,9 @@ export default function Home() {
         // disableFlipByClick={false}
       >
         <IntroCoverPage>
-          <Image
-            src="https://cliparting.com/wp-content/uploads/2018/03/cool-pictures-2018-32.jpg"
-            layout="fill"
-            alt="cover"
-          />
+          <h1 className="text-9xl">Heyyy</h1>
         </IntroCoverPage>
-
-        <AboutMe>About Me</AboutMe>
+        <TableOfContents />
 
         {/* loop through projects */}
         {projects.map((project, index: number) => (
@@ -64,17 +62,20 @@ export default function Home() {
             github={project.github}
             website={project.website}
             description={project.description}
-            tags={project.tags}
+            languages={project.languages}
             technologies={project.technologies}
+            wakatime={project.wakatime}
           />
         ))}
 
+        <AboutMe>About Me</AboutMe>
+
         <OutroCoverPage>
-          <Image
+          {/* <Image
             src="https://cliparting.com/wp-content/uploads/2018/03/cool-pictures-2018-32.jpg"
             layout="fill"
             alt="cover"
-          />
+          /> */}
         </OutroCoverPage>
       </HTMLFlipBook>
     </div>
