@@ -13,6 +13,7 @@ import AboutMe from "../components/aboutMe";
 import TableOfContents from "../components/tableOfContents";
 
 export default function Home() {
+
   return (
     <div>
       {/* @ts-ignore*/}
@@ -28,7 +29,7 @@ export default function Home() {
         // showCover={true}
         // mobileScrollSupport={true}
         className="text-center"
-        style={{ backgroundColor: "gray" }}
+        style={{ backgroundColor: "black" }}
         // startPage={0}
         // minWidth={0}
         // maxWidth={0}
@@ -50,7 +51,7 @@ export default function Home() {
         <IntroCoverPage>
           <h1 className="text-9xl">Heyyy</h1>
         </IntroCoverPage>
-        <TableOfContents />
+        <TableOfContents>Table of Contents</TableOfContents>
 
         {/* loop through projects */}
         {projects.map((project, index: number) => (

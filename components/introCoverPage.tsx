@@ -1,16 +1,19 @@
 import { forwardRef } from "react";
-
+import { Heading, Container } from "@chakra-ui/react";
 interface introCoverProps {
   children: React.ReactNode;
 }
 
 const IntroCoverPage = forwardRef((props: introCoverProps, ref: any) => {
   return (
-    <div className="page page-cover" ref={ref} data-density="hard">
+    <Container className="page page-cover" ref={ref} data-density="hard">
       <div className="page-content">
-        <h2>{props.children}</h2>
+        <Heading>{props.children}</Heading>
+        <div className="contact">
+          <a href="mailto:rami.rami@ucalgary.ca">contact me</a>
+        </div>
       </div>
-    </div>
+    </Container>
   );
 });
 IntroCoverPage.displayName = "IntroCoverPage";

@@ -1,16 +1,23 @@
-import {
-  MDBNavbar,
-  MDBNavbarNav,
-  MDBNavbarItem,
-  MDBNavbarLink,
-  MDBNavbarToggler,
-  MDBContainer,
-  MDBIcon
-} from 'mdb-react-ui-kit';
+import { CircularProgress } from "@chakra-ui/react";
+
+import Logo from "../components/logo";
+import projects from "../public/data/projects";
 
 export default function Navbar() {
+  const numOfPages = projects.length + 3;
+
   return (
-    <h1>NAVBAR</h1>
+    <div className="navbar">
+      <Logo />
+      <h1>NAVBAR</h1>
+      <CircularProgress
+        min={0}
+        max={10}
+        value={1}
+        color="lime"
+        thickness="12px"
+      />
+    </div>
     // <MDBNavbar expand='lg' light bgColor='white' >
     //   <MDBContainer fluid>
     //     <MDBNavbarToggler
