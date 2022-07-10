@@ -1,4 +1,4 @@
-import { Container, Box, Flex, Grid, VStack, Heading, Text, Spacer } from "@chakra-ui/react";
+import { Container, Box, Flex, Grid, VStack, Heading, Text, Spacer, Stack } from "@chakra-ui/react";
 import { forwardRef } from "react";
 import projects from "../public/data/projects";
 interface TableOfContentProps {
@@ -11,35 +11,50 @@ interface ProjectProps {
 const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
   return (
     <Container className="page page-cover" ref={ref} data-density="hard">
-      <VStack className="page-content">
-        <Heading>{props.children}</Heading>
-        <Flex direction="row">
+      <Stack className="text-2xl" shouldWrapChildren={true} spacing={4}>
+        <Heading as="h1">{props.children}</Heading>
+        <Flex>
           <Box>
-            <a href="#intro">Intro</a>
+            <p>Intro</p>
           </Box>
           <Spacer />
           <Box>
-            <Text> | </Text>
+            <Text> 0 </Text>
           </Box>
         </Flex>
-        <Box>
+        <Flex>
           <a href="#projects">Projects</a>
-          <VStack>
-            {projects.map((project: ProjectProps, index: number) => (
-              <Box key={index}>
-                <a href={`#${project.name}`}>{project.name}</a>
-                <p>{project.summary}</p>
-              </Box>
-            ))}
-          </VStack>
-        </Box>
-        <Box>
+          <Spacer />
+          <Box>
+            <Text> 1 </Text>
+          </Box>
+        </Flex>
+
+        <Stack>
+          {projects.map((project: ProjectProps, index: number) => (
+            <Box key={index}>
+              <a href={`#${project.name}`}>
+                <Heading as="h3" size=''>{project.name}</Heading>
+              </a>
+              <p>{project.summary}</p>
+            </Box>
+          ))}
+        </Stack>
+        <Flex>
           <a href="#about-me">About Me</a>
-        </Box>
-        <Box>
+          <Spacer />
+          <Box>
+            <Text> 2 </Text>
+          </Box>
+        </Flex>
+        <Flex>
           <a href="#contact">Contact</a>
-        </Box>
-      </VStack>
+          <Spacer />
+          <Box>
+            <Text> 3 </Text>
+          </Box>
+        </Flex>
+      </Stack>
     </Container>
   );
 });

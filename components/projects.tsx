@@ -20,7 +20,6 @@ const Project = forwardRef((props: ProjectProps, ref: any) => {
 
   return (
     <Grid className="project" ref={ref}>
-      <Navbar></Navbar>
       <div className="project-content" style={{ backgroundColor: "blue" }}>
         <h2 className="project-header">
           {props.name} - project #{props.number + 1}

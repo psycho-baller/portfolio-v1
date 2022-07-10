@@ -11,20 +11,23 @@ import IntroCoverPage from "../components/introCoverPage";
 import OutroCoverPage from "../components/outroCoverPage";
 import AboutMe from "../components/aboutMe";
 import TableOfContents from "../components/tableOfContents";
+import Navbar from "../components/navbar";
 
 export default function Home() {
 
   return (
     <div>
+      <Navbar></Navbar>
+
       {/* @ts-ignore*/}
       <HTMLFlipBook
-        width={300}
-        height={500}
+        width={3}
+        height={4}
         size="stretch"
-        minWidth={315}
-        maxWidth={1000}
-        minHeight={400}
-        maxHeight={1533}
+        // minWidth={315}
+        // maxWidth={1000}
+        // minHeight={400}
+        // maxHeight={1533}
         maxShadowOpacity={0.5}
         // showCover={true}
         // mobileScrollSupport={true}
@@ -39,14 +42,13 @@ export default function Home() {
         // flippingTime={0}
         // usePortrait={false}
         // startZIndex={0}
-        // autoSize={false}
+        autoSize={true}
         // maxShadowOpacity={0}
-        // mobileScrollSupport={false}
         // clickEventForward={false}
         // useMouseEvents={false}
         // swipeDistance={0}
         // showPageCorners={false}
-        // disableFlipByClick={false}
+        // disableFlipByClick={true}
       >
         <IntroCoverPage>
           <h1 className="text-9xl">Heyyy</h1>

@@ -18,25 +18,7 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-.page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-.page-cover {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-.page-content {
+  color: wheat;
 }
 
 .navbar {
@@ -45,9 +27,9 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
-  background-color: #fff;
-  border-bottom: 1px solid #e6e6e6;
-  color: black;
+  background-color: "grey";
+  border-bottom: 1px solid wheat;
+  color: wheat;
 }
 
 .footer {
@@ -56,9 +38,9 @@ a {
   align-items: center;
   justify-content: center;
   padding: 0.5rem 1rem;
-  background-color: #fff;
-  border-top: 1px solid #e6e6e6;
-  color: black;
+  background-color: "grey";
+  border-bottom: 1px solid wheat;
+  color: wheat;
 }
 
 .footer-content {

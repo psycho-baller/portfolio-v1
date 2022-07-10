@@ -1,7 +1,8 @@
 const projects = [
   {
     name: "Knock Joke Heaven",
-    summary: "A website that generates and shows knock jokes in a creative way",
+    summary:
+      "A website that generates and shows knock-knock jokes in a creative way",
     description:
       "The aim of this website is to show a knock knock joke in the most creative way",
     learned: "",
@@ -43,7 +44,7 @@ const projects = [
   {
     name: "Open Seat Finder",
     summary:
-      "A script that checks if there's a research opportunity currently available",
+      "A script that checks for open research opportunities",
     description:
       "Automates the process of constantly checking if there are research participation opportunities which is one of the requirements for 3 intro Psychology courses in University of Calgary.",
     learned: "",
