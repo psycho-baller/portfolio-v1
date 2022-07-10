@@ -21,8 +21,8 @@ export default function Home() {
 
       {/* @ts-ignore*/}
       <HTMLFlipBook
-        width={3}
-        height={4}
+        width={300}
+        height={500}
         size="stretch"
         // minWidth={315}
         // maxWidth={1000}
