@@ -6,8 +6,6 @@ import { animations } from "../animations/contact";
 
 // For display toasts
 import { useToast } from "@chakra-ui/react";
-// import { ToastContainer, toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.min.css";
 
 export default function Contact() {
   const [name, setName] = useState("");

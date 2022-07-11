@@ -2,7 +2,7 @@ import { Markup } from "interweave";
 import { forwardRef } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import { Badge, Grid } from "@chakra-ui/react";
+import { Badge, Grid, Heading, Text } from "@chakra-ui/react";
 interface ProjectProps {
 //   children: React.ReactNode;
   number: number;
@@ -20,12 +20,10 @@ const Project = forwardRef((props: ProjectProps, ref: any) => {
 
   return (
     <Grid className="project" ref={ref}>
-      <div className="project-content" style={{ backgroundColor: "blue" }}>
-        <h2 className="project-header">
-          {props.name} - project #{props.number + 1}
-        </h2>
+      <div className="project-content" style={{ backgroundColor: "grey" }}>
+        <Heading>{props.name}</Heading>
+        <Text fontSize='lg' className="project-description">{props.description}</Text>
         <div className="project-image">{props.image}</div>
-        <div className="project-description">{props.description}</div>
         <div className="project-tags">
           {props.languages.map((language, index: number) => (
             <Badge key={index}>{language}</Badge>

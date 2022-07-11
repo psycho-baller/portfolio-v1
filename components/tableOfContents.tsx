@@ -46,7 +46,7 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
         <Stack>
           {projects.map((project: ProjectProps, index: number) => (
             <Box key={index}>
-              <div onClick={() => props.book.current.pageFlip().flip(index)}>
+              <div onClick={() => props.book.current.pageFlip().flip(index+1)}>
                 <Heading as="h3" size="">
                   {project.name}
                 </Heading>
@@ -59,14 +59,14 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
           <p onClick={() => props.book.current.pageFlip().flip(3)}>About Me</p>
           <Spacer />
           <Box>
-            <Text> 2 </Text>
+            <Text> {projects.length - 1} </Text>
           </Box>
         </Flex>
         <Flex>
           <p onClick={() => props.book.current.pageFlip().flip(4)}>Contact</p>
           <Spacer />
           <Box>
-            <Text> 3 </Text>
+            <Text> {projects.length} </Text>
           </Box>
         </Flex>
       </Stack>

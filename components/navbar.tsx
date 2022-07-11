@@ -1,22 +1,27 @@
-import { CircularProgress } from "@chakra-ui/react";
+import { CircularProgress, Text, IconButton } from "@chakra-ui/react";
+import { InfoIcon } from "@chakra-ui/icons";
 
 import Logo from "../components/logo";
 import projects from "../public/data/projects";
 
-export default function Navbar() {
+interface NavBarProps {
+  currentPage: number;
+}
+
+export default function Navbar(props: NavBarProps) {
   const numOfPages = projects.length + 3;
 
   return (
     <div className="navbar">
       <Logo />
-      <h1>NAVBAR</h1>
       <CircularProgress
         min={0}
-        max={10}
-        value={1}
+        max={numOfPages}
+        value={props.currentPage}
         color="lime"
-        thickness="12px"
+        thickness="14px"
       />
+      <IconButton icon={<InfoIcon />} aria-label="Info" size='lg' fontSize={25} />
     </div>
     // <MDBNavbar expand='lg' light bgColor='white' >
     //   <MDBContainer fluid>

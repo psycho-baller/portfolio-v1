@@ -12,15 +12,18 @@ import OutroCoverPage from "../components/outroCoverPage";
 import AboutMe from "../components/aboutMe";
 import TableOfContents from "../components/tableOfContents";
 import Navbar from "../components/navbar";
-import { useRef } from "react";
+import { useCallback, useRef, useState } from "react";
 import Contact from "../components/contact";
 
 export default function Home() {
   const book = useRef();
+  // @ts-ignore
+  const [currentPage, setCurrentPage] = useState(0);
+
 
   return (
     <div>
-      <Navbar></Navbar>
+      <Navbar currentPage={currentPage} ></Navbar>
 
       {/* @ts-ignore*/}
       <HTMLFlipBook
@@ -28,19 +31,24 @@ export default function Home() {
         height={500}
         size="stretch"
         ref={book}
+        onFlip={useCallback((e: Event) => {
+          {/* @ts-ignore*/}
+          setCurrentPage(e.data as number);
+        }
+        , [])}
         // minWidth={315}
         // maxWidth={1000}
         // minHeight={400}
         // maxHeight={1533}
         maxShadowOpacity={0.5}
         // showCover={true}
-        // mobileScrollSupport={true}
+        // mobileScrollSupport={false}
         className="text-center"
         style={{ backgroundColor: "black" }}
         // startPage={0}
-        // minWidth={0}
+        minWidth={375}
         // maxWidth={0}
-        // minHeight={0}
+        minHeight={0}
         // maxHeight={0}
         // drawShadow={false}
         // flippingTime={0}
@@ -48,7 +56,7 @@ export default function Home() {
         // startZIndex={0}
         autoSize={true}
         // maxShadowOpacity={0}
-        // clickEventForward={false}
+        clickEventForward={true}
         // useMouseEvents={false}
         // swipeDistance={30}
         // showPageCorners={false}
@@ -77,7 +85,7 @@ export default function Home() {
 
         <AboutMe>About Me</AboutMe>
 
-        <Contact/>
+        {/* <Contact/> */}
 
         <OutroCoverPage>
           {/* <Image
