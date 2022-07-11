@@ -1,14 +1,26 @@
-import { Container, Box, Flex, Grid, VStack, Heading, Text, Spacer, Stack } from "@chakra-ui/react";
-import { forwardRef } from "react";
+import {
+  Container,
+  Box,
+  Flex,
+  Grid,
+  VStack,
+  Heading,
+  Text,
+  Spacer,
+  Stack,
+} from "@chakra-ui/react";
+import { forwardRef, useRef } from "react";
 import projects from "../public/data/projects";
 interface TableOfContentProps {
   children: React.ReactNode;
+  book: any;
 }
 interface ProjectProps {
   name: string;
   summary: string;
 }
 const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
+
   return (
     <Container className="page page-cover" ref={ref} data-density="hard">
       <Stack className="text-2xl" shouldWrapChildren={true} spacing={4}>
@@ -23,7 +35,8 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
           </Box>
         </Flex>
         <Flex>
-          <a href="#projects">Projects</a>
+          {/* @ts-ignore */}
+          <p onClick={() => props.book.current.pageFlip().flip(0)}>Projects</p>
           <Spacer />
           <Box>
             <Text> 1 </Text>
@@ -33,15 +46,17 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
         <Stack>
           {projects.map((project: ProjectProps, index: number) => (
             <Box key={index}>
-              <a href={`#${project.name}`}>
-                <Heading as="h3" size=''>{project.name}</Heading>
-              </a>
+              <div onClick={() => props.book.current.pageFlip().flip(index)}>
+                <Heading as="h3" size="">
+                  {project.name}
+                </Heading>
+              </div>
               <p>{project.summary}</p>
             </Box>
           ))}
         </Stack>
         <Flex>
-          <a href="#about-me">About Me</a>
+          <p onClick={() => props.book.current.pageFlip().flip(3)}>About Me</p>
           <Spacer />
           <Box>
             <Text> 2 </Text>

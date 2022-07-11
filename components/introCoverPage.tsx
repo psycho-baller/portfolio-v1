@@ -9,9 +9,9 @@ const IntroCoverPage = forwardRef((props: introCoverProps, ref: any) => {
     <Container className="page page-cover" ref={ref} data-density="hard">
       <div className="page-content">
         <Heading>{props.children}</Heading>
-        <div className="contact">
+        {/* <div className="contact">
           <a href="mailto:rami.rami@ucalgary.ca">contact me</a>
-        </div>
+        </div> */}
       </div>
     </Container>
   );

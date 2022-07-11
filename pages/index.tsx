@@ -12,8 +12,10 @@ import OutroCoverPage from "../components/outroCoverPage";
 import AboutMe from "../components/aboutMe";
 import TableOfContents from "../components/tableOfContents";
 import Navbar from "../components/navbar";
+import { useRef } from "react";
 
 export default function Home() {
+  const book = useRef();
 
   return (
     <div>
@@ -24,6 +26,7 @@ export default function Home() {
         width={300}
         height={500}
         size="stretch"
+        ref={book}
         // minWidth={315}
         // maxWidth={1000}
         // minHeight={400}
@@ -46,14 +49,14 @@ export default function Home() {
         // maxShadowOpacity={0}
         // clickEventForward={false}
         // useMouseEvents={false}
-        // swipeDistance={0}
+        // swipeDistance={30}
         // showPageCorners={false}
         // disableFlipByClick={true}
       >
         <IntroCoverPage>
-          <h1 className="text-9xl">Heyyy</h1>
+          <h1 className="text-7xl">Rami Maalouf</h1>
         </IntroCoverPage>
-        <TableOfContents>Table of Contents</TableOfContents>
+        <TableOfContents book={book}>Table of Contents</TableOfContents>
 
         {/* loop through projects */}
         {projects.map((project, index: number) => (
