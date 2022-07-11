@@ -5,8 +5,9 @@ import { motion } from "framer-motion";
 import { animations } from "../animations/contact";
 
 // For display toasts
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.min.css";
+import { useToast } from "@chakra-ui/react";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.min.css";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -19,6 +20,7 @@ export default function Contact() {
 
   const [riddleQuestion, setRiddleQuestion] = useState("");
   const [riddleAnswer, setRiddleAnswer] = useState("");
+  const toast = useToast();
 
   let jokeStr = "9";
   if (typeof window !== "undefined") {
@@ -54,9 +56,21 @@ export default function Contact() {
       }
     )) as Response;
     if (res.status === 201) {
-      toast("Thank you for contacting us!", { type: "success" });
+      toast({
+        title: "Success!",
+        description: "Thank you for contacting us!",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
     } else {
-      toast("Please re-check your inputs.", { type: "error" });
+      toast({
+        title: "Error!",
+        description: "Something went wrong, please try again.",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
     }
   };
   // let typeOfJoke: HTMLInputElement;
@@ -169,7 +183,7 @@ export default function Contact() {
         <title>Contact</title>
         <link rel="icon" href="/blue-door.svg" />
       </Head>
-      <ToastContainer />
+      {/* <ToastContainer /> */}
       <motion.form
         className={styles.form}
         onSubmit={submitForm}

@@ -13,6 +13,7 @@ import AboutMe from "../components/aboutMe";
 import TableOfContents from "../components/tableOfContents";
 import Navbar from "../components/navbar";
 import { useRef } from "react";
+import Contact from "../components/contact";
 
 export default function Home() {
   const book = useRef();
@@ -75,6 +76,8 @@ export default function Home() {
         ))}
 
         <AboutMe>About Me</AboutMe>
+
+        <Contact/>
 
         <OutroCoverPage>
           {/* <Image

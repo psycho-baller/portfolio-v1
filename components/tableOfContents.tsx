@@ -63,7 +63,7 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
           </Box>
         </Flex>
         <Flex>
-          <a href="#contact">Contact</a>
+          <p onClick={() => props.book.current.pageFlip().flip(4)}>Contact</p>
           <Spacer />
           <Box>
             <Text> 3 </Text>
