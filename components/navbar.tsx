@@ -1,4 +1,4 @@
-import { CircularProgress, Text, IconButton } from "@chakra-ui/react";
+import { CircularProgress, Text, IconButton, Button } from "@chakra-ui/react";
 import { InfoIcon } from "@chakra-ui/icons";
 
 import Logo from "../components/logo";
@@ -6,6 +6,7 @@ import projects from "../public/data/projects";
 
 interface NavBarProps {
   currentPage: number;
+  book: any;
 }
 
 export default function Navbar(props: NavBarProps) {
@@ -14,14 +15,29 @@ export default function Navbar(props: NavBarProps) {
   return (
     <div className="navbar">
       <Logo />
-      <CircularProgress
-        min={0}
-        max={numOfPages}
-        value={props.currentPage}
-        color="lime"
-        thickness="14px"
+      <div>
+        <Button onClick={() => props.book.current.pageFlip().flipPrev()}>
+          Previous Page
+        </Button>
+        <CircularProgress
+          className="mx-4"
+          min={0}
+          max={numOfPages}
+          value={props.currentPage}
+          color="lime"
+          thickness="14px"
+        />
+        <Button onClick={() => props.book.current.pageFlip().flipNext()}>
+          Next Page
+        </Button>
+      </div>
+
+      <IconButton
+        icon={<InfoIcon />}
+        aria-label="Info"
+        size="lg"
+        fontSize={25}
       />
-      <IconButton icon={<InfoIcon />} aria-label="Info" size='lg' fontSize={25} />
     </div>
     // <MDBNavbar expand='lg' light bgColor='white' >
     //   <MDBContainer fluid>

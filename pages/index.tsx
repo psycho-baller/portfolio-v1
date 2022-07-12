@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <div>
-      <Navbar currentPage={currentPage} ></Navbar>
+      <Navbar book={book} currentPage={currentPage}></Navbar>
 
       {/* @ts-ignore*/}
       <HTMLFlipBook
@@ -34,8 +34,7 @@ export default function Home() {
         onFlip={useCallback((e: Event) => {
           {/* @ts-ignore*/}
           setCurrentPage(e.data as number);
-        }
-        , [])}
+        }, [])}
         // minWidth={315}
         // maxWidth={1000}
         // minHeight={400}
@@ -56,11 +55,11 @@ export default function Home() {
         // startZIndex={0}
         autoSize={true}
         // maxShadowOpacity={0}
-        clickEventForward={true}
-        // useMouseEvents={false}
+        clickEventForward={false}
+        useMouseEvents={false}
         // swipeDistance={30}
         // showPageCorners={false}
-        // disableFlipByClick={true}
+        disableFlipByClick={true}
       >
         <IntroCoverPage>
           <h1 className="text-7xl">Rami Maalouf</h1>
