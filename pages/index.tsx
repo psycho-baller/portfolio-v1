@@ -2,6 +2,7 @@ import { Text } from "@chakra-ui/react";
 import styles from "../styles/index.module.scss";
 import HTMLFlipBook from "react-pageflip";
 import Image from "next/image";
+import NextDocument, { Head } from "next/document";
 
 import projects from "../public/data/projects";
 
@@ -20,7 +21,6 @@ export default function Home() {
   // @ts-ignore
   const [currentPage, setCurrentPage] = useState(0);
 
-
   return (
     <div>
       <Navbar book={book} currentPage={currentPage}></Navbar>
@@ -32,7 +32,8 @@ export default function Home() {
         size="stretch"
         ref={book}
         onFlip={useCallback((e: Event) => {
-          {/* @ts-ignore*/}
+          {
+            /* @ts-ignore*/}
           setCurrentPage(e.data as number);
         }, [])}
         // minWidth={315}

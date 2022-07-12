@@ -1,5 +1,10 @@
 import { CircularProgress, Text, IconButton, Button } from "@chakra-ui/react";
-import { InfoIcon } from "@chakra-ui/icons";
+import {
+  ArrowForwardIcon,
+  InfoIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+} from "@chakra-ui/icons";
 
 import Logo from "../components/logo";
 import projects from "../public/data/projects";
@@ -15,27 +20,35 @@ export default function Navbar(props: NavBarProps) {
   return (
     <div className="navbar">
       <Logo />
-      <div>
-        <Button onClick={() => props.book.current.pageFlip().flipPrev()}>
-          Previous Page
+      <div className="px-2">
+        <Button
+          leftIcon={<ChevronLeftIcon h={6} w={6} />}
+          onClick={() => props.book.current.pageFlip().flipPrev()}
+          className="!pl-1 !pr-3"
+        >
+          <p className="prev-pages"></p>
         </Button>
         <CircularProgress
-          className="mx-4"
+          className="mx-1 md:mx-2 lg:mx-4"
           min={0}
           max={numOfPages}
           value={props.currentPage}
           color="lime"
           thickness="14px"
         />
-        <Button onClick={() => props.book.current.pageFlip().flipNext()}>
-          Next Page
+        <Button
+          rightIcon={<ChevronRightIcon h={6} w={6} />}
+          onClick={() => props.book.current.pageFlip().flipNext()}
+          className="!pr-1 !pl-3"
+        >
+          <p className="next-pages"></p>
         </Button>
       </div>
 
       <IconButton
         icon={<InfoIcon />}
         aria-label="Info"
-        size="lg"
+        // size="4xs"
         fontSize={25}
       />
     </div>

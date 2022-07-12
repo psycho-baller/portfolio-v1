@@ -1,14 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap"); */
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Walter Turncoat", cursive,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Walter Turncoat", cursive !important;
 }
 
 a {
@@ -30,6 +29,68 @@ a {
   background-color: "grey";
   border-bottom: 1px solid wheat;
   color: wheat;
+}
+
+.u {
+  width: 13px;
+  height: 14px;
+}
+
+@media screen and (min-width: 650px) {
+  .prev-pages:before {
+    content: "Previous Page";
+  }
+}
+@media screen and (max-width: 650px) {
+  /* .navbar {
+    flex-direction: column;
+  } */
+  .prev-pages:before {
+    content: "prev";
+  }
+}
+@media screen and (max-width: 370px) {
+  /* .navbar {
+    flex-direction: column;
+  } */
+  .prev-pages:before {
+    content: "";
+  }
+  .\!pr-3 {
+    padding-right: 0rem /* 12px */ !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .logo-name {
+    display: none;
+  }
+  .logo-name {
+    display: none;
+  }
+  .u {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .next-pages:before {
+    content: "Next Page";
+  }
+}
+@media screen and (max-width: 650px) {
+  .next-pages:before {
+    content: "next";
+  }
+}
+@media screen and (max-width: 370px) {
+  .next-pages:before {
+    content: "";
+  }
+  .\!pl-3 {
+    padding-left: 0rem /* 12px */ !important;
+  }
 }
 
 .footer {
@@ -108,3 +169,7 @@ li + li {
   }
   browsers: last 2 versions;
 } */
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+}

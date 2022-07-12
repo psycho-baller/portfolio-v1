@@ -13,12 +13,12 @@ export default function Footer() {
                 <div className="footer-content-right">
                     <div className="footer-content-right-text">
                         <h2>Links</h2>
-                        <a href="#">
+                        {/* <a href="#">
                         yr moms house</a>
                         <a href="#">
                         yr dads house</a>
                         <a href="#">
-                        yr sisters house</a>
+                        yr sisters house</a> */}
                     </div>
                 </div>
             </div>

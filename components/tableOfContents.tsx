@@ -36,7 +36,7 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
         </Flex>
         <Flex>
           {/* @ts-ignore */}
-          <p onClick={() => props.book.current.pageFlip().flip(0)}>Projects</p>
+          <p onClick={() => props.book.current.pageFlip().flip(2)}>Projects</p>
           <Spacer />
           <Box>
             <Text> 1 </Text>
@@ -46,7 +46,7 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
         <Stack>
           {projects.map((project: ProjectProps, index: number) => (
             <Box key={index}>
-              <div onClick={() => props.book.current.pageFlip().flip(index+1)}>
+              <div onClick={() => props.book.current.pageFlip().flip(index+2)}>
                 <Heading as="h3" size="">
                   {project.name}
                 </Heading>
