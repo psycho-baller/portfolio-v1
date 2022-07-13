@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
       <Head>
-        <title>Rami Maalouf's portfolio</title>
+        <title>Rami Maalouf&apos;s portfolio</title>
       </Head>
       <Component {...pageProps} />
     </ChakraProvider>

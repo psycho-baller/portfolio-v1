@@ -2,7 +2,6 @@ import { Text } from "@chakra-ui/react";
 import styles from "../styles/index.module.scss";
 import HTMLFlipBook from "react-pageflip";
 import Image from "next/image";
-import NextDocument, { Head } from "next/document";
 
 import projects from "../public/data/projects";
 
