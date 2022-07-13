@@ -20,6 +20,7 @@ export default function Navbar(props: NavBarProps) {
   return (
     <div className="navbar">
       <Logo />
+
       <div className="px-2">
         <Button
           leftIcon={<ChevronLeftIcon h={6} w={6} />}

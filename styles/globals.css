@@ -34,6 +34,16 @@ a {
 .u {
   width: 13px;
   height: 14px;
+  position: relative;
+
+  bottom: 0.03rem;
+}
+.r {
+  width: 18px;
+  height: 18px;
+  position: relative;
+
+  bottom: 0.07rem /* 4px */;
 }
 
 @media screen and (min-width: 650px) {
@@ -65,12 +75,13 @@ a {
   .logo-name {
     display: none;
   }
-  .logo-name {
-    display: none;
-  }
   .u {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
+  }
+  .r {
+    width: 24px;
+    height: 24px;
   }
 }
 

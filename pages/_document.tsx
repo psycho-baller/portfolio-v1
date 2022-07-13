@@ -11,7 +11,6 @@ export default class Document extends NextDocument {
           {/* <meta name="viewport" content="width=device-width, initial-scale=1" /> */}
           <meta name="description" content="Rami Maalouf's portfolio website" />
           <meta name="author" content="Rami Maalouf" />
-          <link rel="icon" href="/logo/u.svg" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
