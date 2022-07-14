@@ -3,10 +3,9 @@ const projects = [
     name: "Knock Joke Heaven",
     summary:
       "A website that generates and shows knock-knock jokes in a creative way",
-    description:
-      "The aim of this website is to show a knock knock joke in the most creative way",
-    learned: "",
+    aim: "The aim of this website is to show a knock knock joke in the most creative way",
     impact: "",
+    learned: "",
     image: "knock-joke-heaven.png",
     github: "https://github.com/psycho-baller/knock-knock-v2",
     website: "https://knock-knock.vercel.app/",
@@ -27,10 +26,9 @@ const projects = [
     name: "HashTable Implementation",
     summary:
       "An interactive website that visually shows how data gets stored in HashTables",
-    description:
-      "Designed an interactive website that visually shows how data gets stored in HashTables",
-    learned: "",
+    aim: "Designed an interactive website that visually shows how data gets stored in HashTables",
     impact: "",
+    learned: "",
     image: "hash-table.png",
     github: "https://github.com/psycho-baller/algorithm-visualization",
     website: "https://hashmap-implementation.vercel.app/",
@@ -43,12 +41,10 @@ const projects = [
   },
   {
     name: "Open Seat Finder",
-    summary:
-      "A script that checks for open research opportunities",
-    description:
-      "Automates the process of constantly checking if there are research participation opportunities which is one of the requirements for 3 intro Psychology courses in University of Calgary.",
-    learned: "",
+    summary: "A script that checks for open research opportunities",
+    aim: "Automates the process of constantly checking if there are research participation opportunities which is one of the requirements for 3 intro Psychology courses in University of Calgary.",
     impact: "",
+    learned: "",
     image: "open-seat-finder.png",
     github: "Project Github",
     website: "",

@@ -20,7 +20,7 @@ interface ProjectProps {
   summary: string;
 }
 const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
-
+  const numOfProjects: number = projects.length as number;
   return (
     <Container className="page page-cover" ref={ref} data-density="hard">
       <Stack className="text-2xl" shouldWrapChildren={true} spacing={4}>
@@ -36,7 +36,7 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
         </Flex>
         <Flex>
           {/* @ts-ignore */}
-          <p onClick={() => props.book.current.pageFlip().flip(2)}>Projects</p>
+          <p onClick={() => props.book.current.pageFlip().flip(2)} className="cursor-pointer">Projects</p>
           <Spacer />
           <Box>
             <Text> 1 </Text>
@@ -46,8 +46,8 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
         <Stack>
           {projects.map((project: ProjectProps, index: number) => (
             <Box key={index}>
-              <div onClick={() => props.book.current.pageFlip().flip(index+2)}>
-                <Heading as="h3" size="">
+              <div onClick={() => props.book.current.pageFlip().flip(index+3)}>
+                <Heading className="cursor-pointer" as="h3" size="">
                   {project.name}
                 </Heading>
               </div>
@@ -56,17 +56,17 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
           ))}
         </Stack>
         <Flex>
-          <p onClick={() => props.book.current.pageFlip().flip(3)}>About Me</p>
+          <p onClick={() => props.book.current.pageFlip().flip(numOfProjects)} className="cursor-pointer">About Me</p>
           <Spacer />
           <Box>
-            <Text> {projects.length - 1} </Text>
+            <Text> {numOfProjects- 1} </Text>
           </Box>
         </Flex>
         <Flex>
-          <p onClick={() => props.book.current.pageFlip().flip(4)}>Contact</p>
+          <p onClick={() => props.book.current.pageFlip().flip(numOfProjects+1)} className="cursor-pointer">Contact</p>
           <Spacer />
           <Box>
-            <Text> {projects.length} </Text>
+            <Text> {numOfProjects} </Text>
           </Box>
         </Flex>
       </Stack>

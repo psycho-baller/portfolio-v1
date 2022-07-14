@@ -87,7 +87,9 @@ export default function Home() {
               image={project.image}
               github={project.github}
               website={project.website}
-              description={project.description}
+              aim={project.aim}
+              impact={project.impact}
+              learned={project.learned}
               languages={project.languages}
               technologies={project.technologies}
               wakatime={project.wakatime}

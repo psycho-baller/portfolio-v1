@@ -34,8 +34,8 @@ export default function Navbar(props: NavBarProps) {
           min={0}
           max={numOfPages}
           value={props.currentPage}
-          color="lime"
-          thickness="14px"
+          color="yellow.400"
+          thickness="15px"
         />
         <Button
           rightIcon={<ChevronRightIcon h={6} w={6} />}
