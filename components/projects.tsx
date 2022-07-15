@@ -1,16 +1,15 @@
 import { Markup } from "interweave";
-import { Component, forwardRef } from "react";
+import { forwardRef, useState } from "react";
 import Footer from "../components/footer";
 import {
   Badge,
-  Grid,
   Heading,
   Text,
   Container,
   ButtonGroup,
   Button,
 } from "@chakra-ui/react";
-import MenAdam from "../public/images/me n adam.jpg";
+import Image from "next/image";
 
 interface ProjectProps {
   //   children: React.ReactNode;
@@ -28,24 +27,39 @@ interface ProjectProps {
 }
 
 const Project = forwardRef((props: ProjectProps, ref: any) => {
+  const [opacity, setOpacity] = useState("opacity-10");
   return (
-    <div className="project" ref={ref} style={{backgroundImage: `url(${MenAdam})`}}>
-      <Container className="project-content">
+    <div className="project" ref={ref}>
+      <Image
+        className={`absolute -z-10 ${opacity}`}
+        src={`/images/${props.image}.png`}
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+      />
+      <Container className="z-0">
         <Heading>{props.name}</Heading>
-        <ButtonGroup className="project-links">
+        <ButtonGroup className="project-links"
+        onMouseEnter={() => {
+          setOpacity("opacity-25");}}
+        onMouseLeave={() => {
+          setOpacity("opacity-10");}}
+>
           <Button>
             <a href={props.github}>Github</a>
           </Button>
-          <Button>
-            {props.website ? <a href={props.website}>Website</a> : null}
-          </Button>
+          {props.website ? (
+            <Button>
+              <a href={props.website}>Website</a>
+            </Button>
+          ) : null}
         </ButtonGroup>
         <div>
           <Text fontSize="lg">Aim/Purpose: {props.aim}</Text>
           <Text fontSize="lg">Result/Impact: {props.impact}</Text>
           <Text fontSize="lg">learned: {props.learned}</Text>
         </div>
-        
+
         <div className="project-tags">
           {props.languages.map((language, index: number) => (
             <Badge colorScheme="green" key={index}>
@@ -68,6 +82,7 @@ const Project = forwardRef((props: ProjectProps, ref: any) => {
         {/* <div className="project-text">{props.children}</div> */}
         <div className="project-footer">{props.number + 1}</div>
       </Container>
+      {/* </div> */}
     </div>
   );
 });
