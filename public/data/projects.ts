@@ -2,14 +2,15 @@ const projects = [
   {
     name: "Knock Joke Heaven",
     summary:
-      "A website that generates and shows knock-knock jokes in a creative way",
-    aim: "The aim of this website is to show a knock knock joke in the most creative way",
-    impact: "",
-    learned: "Not to sacrifice my mental health",
+      "A website that generates and shows knock-knock jokes in the most creative way",
+    aim: "To show a knock knock joke in the most creative way.",
+    impact: "Expanded my box of thinking and creativity by exporing different ways of revealing the joke.",
+    learned:
+      "Got familiar with using & creating react hooks and taking advantage of the browser's localStorage to store the IDs of the jokes that were already rendered. Outside the technical things I learned, I also learned not to sacrifice my mental health for the sake of completing a project. I also realized how consistency is way more important than intensity.",
     image: "knock-joke-heaven",
     github: "https://github.com/psycho-baller/knock-knock-v2",
     website: "https://knock-knock.vercel.app/",
-    languages: ["TypeScript", "SCSS", "Typescript React"],
+    languages: ["TypeScript React", "SCSS"],
     date: "2022-05",
     //   type: "Project Type",
     technologies: [
@@ -26,13 +27,13 @@ const projects = [
     name: "HashTable Implementation",
     summary:
       "An interactive website that visually shows how data gets stored in HashTables",
-    aim: "Designed an interactive website that visually shows how data gets stored in HashTables",
+    aim: "Visually show how data gets stored in HashTables",
     impact: "",
     learned: "",
     image: "hash-table",
     github: "https://github.com/psycho-baller/algorithm-visualization",
     website: "https://hashmap-implementation.vercel.app/",
-    languages: ["TypeScript"],
+    languages: ["TypeScript React", "TypeScript"],
     date: "2022-06",
     //   type: "Project Type",
     technologies: ["Next.js", "ChakraUI", "tailwindcss", "framer-motion"],

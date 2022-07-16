@@ -1,4 +1,10 @@
-import { CircularProgress, Text, IconButton, Button } from "@chakra-ui/react";
+import {
+  CircularProgress,
+  Text,
+  IconButton,
+  Button,
+  CircularProgressLabel,
+} from "@chakra-ui/react";
 import {
   ArrowForwardIcon,
   InfoIcon,
@@ -35,8 +41,10 @@ export default function Navbar(props: NavBarProps) {
           max={numOfPages}
           value={props.currentPage}
           color="yellow.400"
-          thickness="15px"
-        />
+          thickness="12px"
+        >
+          <CircularProgressLabel>{props.currentPage}</CircularProgressLabel>
+        </CircularProgress>
         <Button
           rightIcon={<ChevronRightIcon h={6} w={6} />}
           onClick={() => props.book.current.pageFlip().flipNext()}

@@ -8,6 +8,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Walter Turncoat", cursive !important;
+  background-color: black;
 }
 
 /* Heading {
@@ -191,4 +192,24 @@ li + li {
 .poppins {
   text-transform: uppercase;
   font-weight: bolder;
+}
+
+.badge {
+    display: table;
+    margin: 0 auto;
+}
+
+.left-center{
+  padding: 50% 0;
+  text-align: right;
+
+  /* background-color: yellowgreen */
+
+}
+
+.ferris-wheel{
+  /* background-color: yellowgreen; */
+  width: 75%;
+    left: -50%;
+  position: fixed;
 }
