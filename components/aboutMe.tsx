@@ -16,7 +16,7 @@ const AboutMe = forwardRef((props: AboutMeProps, ref: any) => {
           Who am I?
         </Heading>
         <Text>
-          I'm a passionate explorer who values the connections I make through
+          I&apos;m a passionate explorer who values the connections I make through
           the unique experiences I go through with them. I believe in balance so
           I try not to overdo/underdo things and try to maximize (make the best
           of) my experience with everything I do. I also like to balance my
