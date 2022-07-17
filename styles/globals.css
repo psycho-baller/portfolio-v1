@@ -202,14 +202,22 @@ li + li {
 .left-center{
   padding: 50% 0;
   text-align: right;
+}
 
-  /* background-color: yellowgreen */
-
+.right-center{
+  padding: 50% 0;
 }
 
 .ferris-wheel{
-  /* background-color: yellowgreen; */
   width: 75%;
     left: -50%;
   position: fixed;
+}
+
+.ferris-wheel-techs{
+  width: 75%;
+    right: -50%;
+  position: fixed;
+  display: flex;
+
 }

@@ -4,7 +4,7 @@ const projects = [
     summary:
       "A website that generates and shows knock-knock jokes in the most creative way",
     aim: "To show a knock knock joke in the most creative way.",
-    impact: "Expanded my box of thinking and creativity by exporing different ways of revealing the joke.",
+    impact: "Expanded my box of thinking and creativity by exploring different ways of revealing the joke.",
     learned:
       "Got familiar with using & creating react hooks and taking advantage of the browser's localStorage to store the IDs of the jokes that were already rendered. Outside the technical things I learned, I also learned not to sacrifice my mental health for the sake of completing a project. I also realized how consistency is way more important than intensity.",
     image: "knock-joke-heaven",
