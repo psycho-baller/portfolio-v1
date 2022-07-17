@@ -26,6 +26,8 @@ const IntroCoverPage = forwardRef((props: introCoverProps, ref: any) => {
     "framer-motion.webp",
     "html.svg",
     "scss.svg",
+    "jupyter.svg",
+    "java.svg",
   ];
 
   return (
