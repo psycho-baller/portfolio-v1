@@ -19,8 +19,13 @@ const IntroCoverPage = forwardRef((props: introCoverProps, ref: any) => {
     "next-js.png",
     "react-js.svg",
     "typescript.svg",
+    "python.svg",
     "node-js.svg",
-
+    "tailwindcss.svg",
+    "chakra-ui.jpg",
+    "framer-motion.webp",
+    "html.svg",
+    "scss.svg",
   ];
 
   return (
