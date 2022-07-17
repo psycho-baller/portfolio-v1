@@ -1,7 +1,6 @@
 import { forwardRef } from "react";
 import { Heading, Container, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { ferrisWheel } from "../animations/introPage";
 import Image from "next/image";
 interface introCoverProps {
   children: React.ReactNode;
