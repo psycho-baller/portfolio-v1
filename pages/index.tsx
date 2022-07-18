@@ -40,11 +40,11 @@ export default function Home() {
         {/* @ts-ignore*/}
         <HTMLFlipBook
           width={400}
-          height={400}
+          height={500}
           size="stretch"
           ref={book}
           onFlip={useCallback((e: Event) => {
-            {    
+            {
               /* @ts-ignore*/}
             setCurrentPage(e.data as number);
           }, [])}
