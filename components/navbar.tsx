@@ -4,6 +4,7 @@ import {
   IconButton,
   Button,
   CircularProgressLabel,
+  useColorMode,
 } from "@chakra-ui/react";
 import {
   ArrowForwardIcon,
@@ -22,11 +23,10 @@ interface NavBarProps {
 
 export default function Navbar(props: NavBarProps) {
   const numOfPages = projects.length + 3;
-
+const { colorMode, toggleColorMode } = useColorMode();
   return (
     <div className="navbar">
       <Logo />
-
       <div className="px-2">
         <Button
           leftIcon={<ChevronLeftIcon h={6} w={6} />}
@@ -53,8 +53,8 @@ export default function Navbar(props: NavBarProps) {
           <p className="next-pages"></p>
         </Button>
       </div>
-
       <IconButton
+        onClick={toggleColorMode}
         icon={<InfoIcon />}
         aria-label="Info"
         // size="4xs"
