@@ -36,7 +36,12 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
         </Flex>
         <Flex>
           {/* @ts-ignore */}
-          <p onClick={() => props.book.current.pageFlip().flip(2)} className="cursor-pointer">Projects</p>
+          <p
+            onClick={() => props.book.current.pageFlip().flip(2)}
+            className="cursor-pointer"
+          >
+            Projects
+          </p>
           <Spacer />
           <Box>
             <Text> 1 </Text>
@@ -46,7 +51,9 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
         <Stack>
           {projects.map((project: ProjectProps, index: number) => (
             <Box key={index}>
-              <div onClick={() => props.book.current.pageFlip().flip(index+3)}>
+              <div
+                onClick={() => props.book.current.pageFlip().flip(index + 3)}
+              >
                 <Heading className="cursor-pointer" as="h3" size="">
                   {project.name}
                 </Heading>
@@ -56,17 +63,29 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
           ))}
         </Stack>
         <Flex>
-          <p onClick={() => props.book.current.pageFlip().flip(numOfProjects)} className="cursor-pointer">About Me</p>
+          <p
+            onClick={() => props.book.current.pageFlip().flip(numOfProjects)}
+            className="cursor-pointer"
+          >
+            About Me
+          </p>
           <Spacer />
           <Box>
-            <Text> {numOfProjects- 1} </Text>
+            <Text> {numOfProjects + 1} </Text>
           </Box>
         </Flex>
         <Flex>
-          <p onClick={() => props.book.current.pageFlip().flip(numOfProjects+1)} className="cursor-pointer">Contact</p>
+          <p
+            onClick={() =>
+              props.book.current.pageFlip().flip(numOfProjects + 1)
+            }
+            className="cursor-pointer"
+          >
+            Contact
+          </p>
           <Spacer />
           <Box>
-            <Text> {numOfProjects} </Text>
+            <Text> {numOfProjects+2} </Text>
           </Box>
         </Flex>
       </Stack>

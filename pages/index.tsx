@@ -36,14 +36,15 @@ export default function Home() {
           <title>Rami Maalouf&apos;s portfolio</title>
         </Head>
         <Navbar book={book} currentPage={currentPage}></Navbar>
+        {/* https://github.com/Nodlik/react-pageflip */}
         {/* @ts-ignore*/}
         <HTMLFlipBook
-          width={300}
-          height={500}
+          width={400}
+          height={400}
           size="stretch"
           ref={book}
           onFlip={useCallback((e: Event) => {
-            {
+            {    
               /* @ts-ignore*/}
             setCurrentPage(e.data as number);
           }, [])}
@@ -51,15 +52,15 @@ export default function Home() {
           // maxWidth={1000}
           // minHeight={400}
           // maxHeight={1533}
-          maxShadowOpacity={0.5}
+          maxShadowOpacity={0}
           // showCover={true}
           // mobileScrollSupport={false}
           className="text-center"
           style={{ backgroundColor: "black" }}
           // startPage={0}
-          minWidth={375}
+          minWidth={400}
           // maxWidth={0}
-          minHeight={0}
+          // minHeight={0}
           // maxHeight={0}
           // drawShadow={false}
           // flippingTime={0}
@@ -67,11 +68,11 @@ export default function Home() {
           // startZIndex={0}
           autoSize={true}
           // maxShadowOpacity={0}
-          clickEventForward={false}
+          // clickEventForward={false}
           useMouseEvents={false}
           // swipeDistance={30}
           // showPageCorners={false}
-          disableFlipByClick={true}
+          // disableFlipByClick={true}
         >
           <IntroCoverPage>
             <h1 className="text-7xl">Rami Maalouf</h1>
