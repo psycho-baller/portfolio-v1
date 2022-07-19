@@ -64,9 +64,11 @@ const Project = forwardRef((props: ProjectProps, ref: any) => {
           <Text fontSize="lg" className="p-1">
             <span className="font-black">Aim/Purpose: </span> {props.aim}
           </Text>
-          <Text fontSize="lg" className="p-1">
-            <span className="font-black">Result/Impact: </span> {props.impact}
-          </Text>
+          {props.impact ? (
+            <Text fontSize="lg" className="p-1">
+              <span className="font-black">Result/Impact: </span> {props.impact}
+            </Text>
+          ) : null}
           <Text fontSize="lg" className="p-1">
             <span className="font-black">learned: </span>
             {props.learned}

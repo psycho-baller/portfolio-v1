@@ -108,9 +108,6 @@ const IntroCoverPage = forwardRef((props: introCoverProps, ref: any) => {
                 alt={tech}
                 width={50}
                 height={50}
-                // layout="fill"
-                // objectFit="cover"
-                // quality={100}
               />
 
             </div>
