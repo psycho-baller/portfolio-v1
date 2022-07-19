@@ -1,20 +1,16 @@
 import {
   CircularProgress,
-  Text,
-  IconButton,
   Button,
   CircularProgressLabel,
-  useColorMode,
 } from "@chakra-ui/react";
 import {
-  ArrowForwardIcon,
-  InfoIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
 
 import Logo from "../components/logo";
 import projects from "../public/data/projects";
+import InfoButton from "../components/infoButton";
 
 interface NavBarProps {
   currentPage: number;
@@ -52,12 +48,7 @@ export default function Navbar(props: NavBarProps) {
           <p className="next-pages"></p>
         </Button>
       </div>
-      <IconButton
-        icon={<InfoIcon />}
-        aria-label="Info"
-        // size="4xs"
-        fontSize={25}
-      />
+      <InfoButton/>
     </div>
   );
 }
