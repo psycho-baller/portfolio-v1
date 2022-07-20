@@ -12,13 +12,14 @@ import {
   WrapItem,
 } from "@chakra-ui/react";
 import Image from "next/image";
+import YoutubeEmbed from "../components/ytEmbed";
 
 interface ProjectProps {
   //   children: React.ReactNode;
   number: number;
   name: string;
   image: string;
-  // video: string;
+  video: string;
   github: string;
   website: string;
   aim: string;
@@ -92,10 +93,12 @@ const Project = forwardRef((props: ProjectProps, ref: any) => {
           ))}
         </Wrap>
         <div className="justify-center badge">
-          <Markup content={props.wakatime} />
+          {props.wakatime ? <Markup content={props.wakatime} /> : null}
         </div>
-        <div className="project-video">{props.image}</div>
 
+        {props.video ? (
+          <YoutubeEmbed embedId={props.video} width="100%" height="100%" />
+        ) : null}
         <div className="project-footer">{props.number + 1}</div>
       </Container>
     </div>

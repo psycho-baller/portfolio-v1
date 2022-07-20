@@ -86,6 +86,7 @@ export default function Home() {
               number={index}
               name={project.name}
               image={project.image}
+              video={project.video}
               github={project.github}
               website={project.website}
               aim={project.aim}
