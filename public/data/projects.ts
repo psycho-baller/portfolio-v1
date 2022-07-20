@@ -9,7 +9,7 @@ const projects = [
     learned:
       "Got familiar with using & creating react hooks and taking advantage of the browser's localStorage to store the IDs of the jokes that were already rendered. Outside the technical things I learned, I also learned not to sacrifice my mental health for the sake of completing a project. I also realized how consistency is way more important than intensity.",
     image: "knock-joke-heaven",
-    video: "",
+    video: "5kaU8oAHSq0",
     github: "https://github.com/psycho-baller/knock-knock-v2",
     website: "https://knock-knock.vercel.app/",
     languages: ["TypeScript React", "SCSS"],
@@ -35,7 +35,7 @@ const projects = [
     learned:
       "I applied everything I learned in that course and everything I learned in Next.js to create this website with the help of the front end technologies specified below to speed up the production process since I had to start studying for my finals for that course lol.",
     image: "hash-table",
-    video: "",
+    video: "jdPdvyUBAyA",
     github: "https://github.com/psycho-baller/algorithm-visualization",
     website: "https://hashmap-implementation.vercel.app/",
     languages: ["TypeScript React", "TypeScript"],
@@ -55,7 +55,7 @@ const projects = [
     learned:
       "Utilized GitHub/GitLab for version control. Working with a partner to create a project was harder than I initially thought but nonetheless a great experience that I will be better at managing the next time I work with a group.",
     image: "football-manager",
-    video: "",
+    video: "VJlGCv_ZLFA",
     github: "https://github.com/psycho-baller/Football-League-Manager",
     website: "",
     languages: ["Java"],
