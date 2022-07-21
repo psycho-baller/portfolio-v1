@@ -9,7 +9,7 @@ const AboutMe = forwardRef((props: AboutMeProps, ref: any) => {
   return (
     <div className="page page-cover" ref={ref} data-density="hard">
       <Container className="page-content">
-        <Heading as="h1" className="pt-1 pb-1">
+        <Heading as="h1" className="pt-2 pb-1">
           {props.children}
         </Heading>
         <Heading as="h3" size="md" className="pt-4">

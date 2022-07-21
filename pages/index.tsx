@@ -13,16 +13,16 @@ import AboutMe from "../components/aboutMe";
 import TableOfContents from "../components/tableOfContents";
 import Navbar from "../components/navbar";
 import { useCallback, useRef, useState } from "react";
-      import Head from "next/head";
+import Head from "next/head";
 
 import Contact from "../components/contact";
+import ContactForm from "../components/contactForm";
 
 export default function Home() {
   const book = useRef();
   // @ts-ignore
   const [currentPage, setCurrentPage] = useState(0);
   const [favicon, setFavicon] = useState(true);
-
 
   return (
     <div>
@@ -45,7 +45,7 @@ export default function Home() {
           ref={book}
           onFlip={useCallback((e: Event) => {
             {
-              /* @ts-ignore*/}
+              /* @ts-ignore*/ }
             setCurrentPage(e.data as number);
           }, [])}
           // minWidth={315}
@@ -100,7 +100,9 @@ export default function Home() {
 
           <AboutMe>About Me</AboutMe>
 
-          {/* <Contact/> */}
+          <div>
+            <ContactForm />
+          </div>
 
           <OutroCoverPage>
             {/* <Image
