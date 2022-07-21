@@ -8,6 +8,7 @@ import {
   Textarea,
   Heading,
   Button,
+  VStack,
 } from "@chakra-ui/react";
 import { forwardRef } from "react";
 import { useForm } from "react-hook-form";
@@ -61,7 +62,7 @@ const ContactForm = forwardRef((props: ContactProps, ref: any) => {
     // });
   }
   return (
-    <Container ref={ref}>
+    <VStack ref={ref}>
       <Heading p={2}>{props.children}</Heading>
 
 
@@ -105,7 +106,7 @@ const ContactForm = forwardRef((props: ContactProps, ref: any) => {
           Submit
         </Button>
       </form>
-    </Container>
+    </VStack>
   );
 });
 

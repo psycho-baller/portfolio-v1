@@ -1,7 +1,10 @@
 import { forwardRef } from "react";
-import { Heading, Container, Text } from "@chakra-ui/react";
+import { Heading, Container, Text, IconButton, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { EmailIcon } from "@chakra-ui/icons";
+import { AiFillGithub } from "react-icons/ai";
+import { RiLinkedinFill } from "react-icons/ri";
 interface introCoverProps {
   children: React.ReactNode;
 }
@@ -34,15 +37,39 @@ const IntroCoverPage = forwardRef((props: introCoverProps, ref: any) => {
   ];
 
   return (
-    <div ref={ref} data-density="hard" className="overflow-hidden">
+    <Container ref={ref} data-density="hard" className="overflow-hidden">
       <Heading>{props.children}</Heading>
-      {/* <div className="contact">
-          <a href="mailto:rami.rami@ucalgary.ca">contact me</a>
-        </div> */}
+      <VStack className="absolute left-0 right-0">
+        <a href="mailto:rami.rami@ucalgary.ca">
+          <IconButton
+            variant="outline"
+            colorScheme="yellow"
+            aria-label="Send email"
+            icon={<EmailIcon />}
+          />
+        </a>
+        <a href="https://github.com/psycho-baller">
+          <IconButton
+            variant="outline"
+            colorScheme="yellow"
+            aria-label="Send email"
+            icon={<AiFillGithub />}
+          />
+        </a>
+        <a href="https://www.linkedin.com/in/rami--maalouf/">
+          <IconButton
+            variant="outline"
+            colorScheme="yellow"
+            aria-label="Send email"
+            icon={<RiLinkedinFill />}
+          />
+        </a>
+      </VStack>
+
       {ferrisOfTraits.map((trait, index: number) => {
         return (
           <motion.div
-            key={index}
+            key={index + 1}
             className="ferris-wheel"
             initial="initial"
             animate={["animate", "initialHide"]}
@@ -53,7 +80,7 @@ const IntroCoverPage = forwardRef((props: introCoverProps, ref: any) => {
                 transition: {
                   duration: ferrisOfTraits.length,
                   loop: Infinity,
-                  delay: index,
+                  delay: index + 1,
                   // ease: "linear",
                 },
               },
@@ -63,7 +90,7 @@ const IntroCoverPage = forwardRef((props: introCoverProps, ref: any) => {
               initialHide: {
                 opacity: 1,
                 transition: {
-                  delay: index,
+                  delay: index + 1,
                 },
               },
             }}
@@ -77,7 +104,7 @@ const IntroCoverPage = forwardRef((props: introCoverProps, ref: any) => {
         return (
           <motion.div
             className="ferris-wheel-techs"
-            key={index}
+            key={index + 1}
             initial="initial"
             animate={["animate", "initialHide"]}
             exit="exit"
@@ -87,7 +114,7 @@ const IntroCoverPage = forwardRef((props: introCoverProps, ref: any) => {
                 transition: {
                   duration: ferrisOfTechs.length,
                   loop: Infinity,
-                  delay: index,
+                  delay: index + 1,
                   ease: "linear",
                 },
               },
@@ -97,7 +124,7 @@ const IntroCoverPage = forwardRef((props: introCoverProps, ref: any) => {
               initialHide: {
                 opacity: 1,
                 transition: {
-                  delay: index,
+                  delay: index + 1,
                 },
               },
             }}
@@ -109,12 +136,11 @@ const IntroCoverPage = forwardRef((props: introCoverProps, ref: any) => {
                 width={50}
                 height={50}
               />
-
             </div>
           </motion.div>
         );
       }, [])}
-    </div>
+    </Container>
   );
 });
 IntroCoverPage.displayName = "IntroCoverPage";

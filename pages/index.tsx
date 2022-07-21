@@ -12,10 +12,9 @@ import OutroCoverPage from "../components/outroCoverPage";
 import AboutMe from "../components/aboutMe";
 import TableOfContents from "../components/tableOfContents";
 import Navbar from "../components/navbar";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Head from "next/head";
 
-import Contact from "../components/contact";
 import ContactForm from "../components/contactForm";
 
 export default function Home() {
@@ -23,6 +22,11 @@ export default function Home() {
   // @ts-ignore
   const [currentPage, setCurrentPage] = useState(0);
   const [favicon, setFavicon] = useState(true);
+
+  useEffect(() => {
+    // book.?current.pageFlip().flipTo(currentPage);
+    setFavicon((favicon) => !favicon);
+  }, [currentPage]);
 
   return (
     <div>
@@ -34,9 +38,6 @@ export default function Home() {
         <Navbar
           book={book}
           currentPage={currentPage}
-          onClick={() => {
-            setFavicon((favicon) => !favicon);
-          }}
         ></Navbar>
         {/* https://github.com/Nodlik/react-pageflip */}
         {/* @ts-ignore*/}
@@ -104,13 +105,8 @@ export default function Home() {
 
           <ContactForm>Contact Me</ContactForm>
 
-          <OutroCoverPage>
-            {/* <Image
-            src="https://cliparting.com/wp-content/uploads/2018/03/cool-pictures-2018-32.jpg"
-            layout="fill"
-            alt="cover"
-          /> */}
-          </OutroCoverPage>
+          {/* <OutroCoverPage>
+          </OutroCoverPage> */}
         </HTMLFlipBook>
       </div>
     </div>

@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { forwardRef, useRef } from "react";
 import projects from "../public/data/projects";
+import {motion} from "framer-motion";
 interface TableOfContentProps {
   children: React.ReactNode;
   book: any;
@@ -51,13 +52,17 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
         <Stack>
           {projects.map((project: ProjectProps, index: number) => (
             <Box key={index}>
-              <div
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ type: "spring", stiffness: 500 }}
+                whileHover={{ scale: 1.1 }}
                 onClick={() => props.book.current.pageFlip().flip(index + 3)}
               >
                 <Heading className="cursor-pointer" as="h3" size="">
                   {project.name}
                 </Heading>
-              </div>
+              </motion.div>
               <p>{project.summary}</p>
             </Box>
           ))}
@@ -85,7 +90,7 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
           </p>
           <Spacer />
           <Box>
-            <Text> {numOfProjects+2} </Text>
+            <Text> {numOfProjects + 2} </Text>
           </Box>
         </Flex>
       </Stack>
