@@ -5,6 +5,8 @@ import Image from "next/image";
 import { EmailIcon } from "@chakra-ui/icons";
 import { AiFillGithub } from "react-icons/ai";
 import { RiLinkedinFill } from "react-icons/ri";
+import { IoIosPaper } from "react-icons/io";
+import Link from "next/link";
 interface introCoverProps {
   children: React.ReactNode;
 }
@@ -52,7 +54,7 @@ const IntroCoverPage = forwardRef((props: introCoverProps, ref: any) => {
           <IconButton
             variant="outline"
             colorScheme="yellow"
-            aria-label="Send email"
+            aria-label="github"
             icon={<AiFillGithub />}
           />
         </a>
@@ -60,10 +62,20 @@ const IntroCoverPage = forwardRef((props: introCoverProps, ref: any) => {
           <IconButton
             variant="outline"
             colorScheme="yellow"
-            aria-label="Send email"
+            aria-label="linkedin"
             icon={<RiLinkedinFill />}
           />
         </a>
+        <Link href="/resume.pdf" passHref >
+          <a target="_blank">
+            <IconButton
+              variant="outline"
+              colorScheme="yellow"
+              aria-label="resume"
+              icon={<IoIosPaper />}
+            />
+          </a>
+        </Link>
       </VStack>
 
       {ferrisOfTraits.map((trait, index: number) => {
