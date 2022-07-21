@@ -45,7 +45,7 @@ export default function Home() {
           ref={book}
           onFlip={useCallback((e: Event) => {
             {
-              /* @ts-ignore*/ }
+              /* @ts-ignore*/}
             setCurrentPage(e.data as number);
           }, [])}
           // minWidth={315}
@@ -100,9 +100,7 @@ export default function Home() {
 
           <AboutMe>About Me</AboutMe>
 
-          <div>
-            <ContactForm />
-          </div>
+          <ContactForm>Contact Me</ContactForm>
 
           <OutroCoverPage>
             {/* <Image

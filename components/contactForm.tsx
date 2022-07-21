@@ -9,36 +9,44 @@ import {
   Heading,
   Button,
 } from "@chakra-ui/react";
-import { SetStateAction, useState } from "react";
+import { SetStateAction, useState, forwardRef } from "react";
 import { useForm } from "react-hook-form";
 
-
-const ContactForm = () => {
-//   const [email, setEmail] = useState("");
-//     const [name, setName] = useState("");
-//     const [message, setMessage] = useState("");
-
-//   const handleEmailChange = (e: { target: { value: SetStateAction<string>; }; }) => setEmail(e.target.value);
-//     const handleNameChange = (e: { target: { value: SetStateAction<string>; }; }) => setName(e.target.value);
-//     const handleMessageChange = (e: { target: { value: SetStateAction<string>; }; }) => setMessage(e.target.value);
-
-//   const isError = message === "";
-    const {
-      handleSubmit,
-      register,
-      formState: { errors, isSubmitting },
-    } = useForm();
-function onSubmit(values: any) {
-  return new Promise<void>((resolve) => {
-    setTimeout(() => {
-      alert(JSON.stringify(values, null, 2));
-      resolve();
-    }, 3000);
-  });
+interface ContactProps {
+  children: React.ReactNode;
 }
+
+const ContactForm = forwardRef((props: ContactProps, ref: any) => {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleEmailChange = (e: {
+    target: { value: SetStateAction<string> };
+  }) => setEmail(e.target.value);
+  const handleNameChange = (e: { target: { value: SetStateAction<string> } }) =>
+    setName(e.target.value);
+  const handleMessageChange = (e: {
+    target: { value: SetStateAction<string> };
+  }) => setMessage(e.target.value);
+
+  const isError = message === "";
+  const {
+    handleSubmit,
+    register,
+    formState: { errors, isSubmitting },
+  } = useForm();
+  function onSubmit(values: any) {
+    return new Promise<void>((resolve) => {
+      setTimeout(() => {
+        alert(JSON.stringify(values, null, 2));
+        resolve();
+      }, 3000);
+    });
+  }
   return (
-    <Container>
-      <Heading p={2}>Contact Me</Heading>
+    <Container ref={ref}>
+      <Heading p={2}>{props.children}</Heading>
 
       <form action="" onSubmit={handleSubmit(onSubmit)}>
         <FormControl>
@@ -47,8 +55,8 @@ function onSubmit(values: any) {
             {...register("name")}
             id="name"
             type="text"
-            // value={name}
-            // onChange={handleNameChange}
+            value={name}
+            onChange={handleNameChange}
           />
         </FormControl>
         <FormControl>
@@ -56,27 +64,29 @@ function onSubmit(values: any) {
           <Input
             {...register("email")}
             type="email"
-            // value={email}
-            // onChange={handleEmailChange}
+            value={email}
+            onChange={handleEmailChange}
           />
         </FormControl>
-        <FormControl >
+        <FormControl>
           <FormLabel id="message">Message</FormLabel>
           <Textarea
+            isInvalid={isError}
+            isRequired
             {...register("message", {
               required: "This is required",
             })}
-            // value={message}
-            // onChange={handleMessageChange}
+            value={message}
+            onChange={handleMessageChange}
             resize="vertical"
           />
-          {/* {!isError ? (
+          {!isError ? (
             <FormHelperText>
               Enter the message you would like to send me.
             </FormHelperText>
           ) : (
             <FormErrorMessage>Message is required</FormErrorMessage>
-          )} */}
+          )}
         </FormControl>
         <Button
           mt={4}
@@ -89,6 +99,6 @@ function onSubmit(values: any) {
       </form>
     </Container>
   );
-};
+});
 
 export default ContactForm;
