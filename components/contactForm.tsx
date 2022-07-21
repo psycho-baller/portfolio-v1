@@ -9,40 +9,55 @@ import {
   Heading,
   Button,
 } from "@chakra-ui/react";
-import { SetStateAction, useState, forwardRef } from "react";
+import { forwardRef } from "react";
 import { useForm } from "react-hook-form";
+import { useToast } from "@chakra-ui/react";
 
 interface ContactProps {
   children: React.ReactNode;
 }
 
 const ContactForm = forwardRef((props: ContactProps, ref: any) => {
-//   const [email, setEmail] = useState("");
-//   const [name, setName] = useState("");
-//   const [message, setMessage] = useState("");
-
-//   const handleEmailChange = (e: {
-//     target: { value: SetStateAction<string> };
-//   }) => setEmail(e.target.value);
-//   const handleNameChange = (e: { target: { value: SetStateAction<string> } }) =>
-//     setName(e.target.value);
-//   const handleMessageChange = (e: {
-//     target: { value: SetStateAction<string> };
-//   }) => setMessage(e.target.value);
-
-//   const isError = message === "";
+  const toast = useToast();
   const {
     handleSubmit,
     register,
-    formState: { errors, isSubmitting },
-  } = useForm();
-  function onSubmit(data: any) {
-    return new Promise<void>((resolve) => {
-    //   setTimeout(() => {
+    formState: { errors, isSubmitting, isDirty },
+  } = useForm({ defaultValues: { message: "", name: "", email: "" } });
+ function onSubmit(data: any) {
+    const name = data.name === "" ? "Anonymous" : data.name;
+    const email = data.email === "" ? "an@on" : data.email;
+    const message = data.message;
+    return new Promise<void>(async (resolve) => {
+        // setTimeout(() => {
+        const res = (await fetch(
+      "https://rami-maalouf.vercel.app/api/notionAPI",
+      {
+        method: "POST",
+        body: JSON.stringify({ name, email, message }),
+      }
+    )) as Response;
+    if (res.status === 201) {
+      toast({
+        title: "Success!",
+        description: "Thank you for contacting us!",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
+    } else {
+      toast({
+        title: "Error!",
+        description: "Something went wrong, please try again.",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+    }
 
-        alert(JSON.stringify(data, null, 2));
-        resolve();
-    //   }, 1000);
+    //   alert(JSON.stringify({ name, email, message }));
+      resolve();
+      //   }, 1000);
     });
   }
   return (
@@ -53,47 +68,39 @@ const ContactForm = forwardRef((props: ContactProps, ref: any) => {
         <FormControl>
           <FormLabel htmlFor="name">Name</FormLabel>
           <Input
+            focusBorderColor="yellow.200"
             {...register("name")}
             id="name"
             type="text"
-            // value={name}
-            // onChange={handleNameChange}
           />
         </FormControl>
         <FormControl>
           <FormLabel id="email">Email</FormLabel>
           <Input
+            focusBorderColor="yellow.200"
             {...register("email")}
             type="email"
-            // value={email}
-            // onChange={handleEmailChange}
           />
         </FormControl>
         <FormControl isRequired>
           <FormLabel id="message">Message</FormLabel>
           <Textarea
-            // isInvalid={isError}
-            {...register("messag", {
+            focusBorderColor="yellow.200"
+            {...register("message", {
               required: "This is required",
             })}
-            // value={message}
-            // onChange={handleMessageChange}
             resize="vertical"
           />
-          {!(errors.messag) ? (
+          {!isDirty && (
             <FormHelperText>
               Enter the message you would like to send me.
             </FormHelperText>
-          ) : (
-            <FormErrorMessage>Message is required</FormErrorMessage>
           )}
+          {errors.message &&  <FormErrorMessage>{errors.message.message}</FormErrorMessage>}
+
+          
         </FormControl>
-        <Button
-          mt={4}
-        //   colorScheme="teal"
-          isLoading={isSubmitting}
-          type="submit"
-        >
+        <Button mt={4} isLoading={isSubmitting} type="submit">
           Submit
         </Button>
       </form>

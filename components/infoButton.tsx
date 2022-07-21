@@ -27,6 +27,7 @@ const InfoButton = () => {
           <PopoverCloseButton />
           <PopoverHeader>Welcome!</PopoverHeader>
           <PopoverBody>This website is still under construction</PopoverBody>
+          <PopoverFooter>V1.0</PopoverFooter>
         </PopoverContent>
       </Popover>
     );
