@@ -101,4 +101,5 @@ const ContactForm = forwardRef((props: ContactProps, ref: any) => {
   );
 });
 
+ContactForm.displayName = "ContactForm";
 export default ContactForm;
