@@ -24,19 +24,19 @@ const ContactForm = forwardRef((props: ContactProps, ref: any) => {
     register,
     formState: { errors, isSubmitting, isDirty },
   } = useForm({ defaultValues: { message: "", name: "", email: "" } });
- function onSubmit(data: any) {
+ async function onSubmit(data: any) {
     const name = data.name === "" ? "Anonymous" : data.name;
     const email = data.email === "" ? "an@on" : data.email;
     const message = data.message;
-    return new Promise<void>(async (resolve) => {
+    // return new Promise<void>( (resolve) => {
         // setTimeout(() => {
         const res = (await fetch(
-      "https://rami-maalouf.vercel.app/api/notionAPI",
-      {
-        method: "POST",
-        body: JSON.stringify({ name, email, message }),
-      }
-    )) as Response;
+          "https://rami-maalouf.vercel.app/api/notionAPI",
+          {
+            method: "POST",
+            body: JSON.stringify({ name, email, message }),
+          }
+        )) as Response;
     if (res.status === 201) {
       toast({
         title: "Success!",
@@ -56,13 +56,14 @@ const ContactForm = forwardRef((props: ContactProps, ref: any) => {
     }
 
     //   alert(JSON.stringify({ name, email, message }));
-      resolve();
+    //   resolve();
       //   }, 1000);
-    });
+    // });
   }
   return (
     <Container ref={ref}>
       <Heading p={2}>{props.children}</Heading>
+
 
       <form action="" onSubmit={handleSubmit(onSubmit)}>
         <FormControl>
