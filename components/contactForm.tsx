@@ -17,31 +17,32 @@ interface ContactProps {
 }
 
 const ContactForm = forwardRef((props: ContactProps, ref: any) => {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [message, setMessage] = useState("");
+//   const [email, setEmail] = useState("");
+//   const [name, setName] = useState("");
+//   const [message, setMessage] = useState("");
 
-  const handleEmailChange = (e: {
-    target: { value: SetStateAction<string> };
-  }) => setEmail(e.target.value);
-  const handleNameChange = (e: { target: { value: SetStateAction<string> } }) =>
-    setName(e.target.value);
-  const handleMessageChange = (e: {
-    target: { value: SetStateAction<string> };
-  }) => setMessage(e.target.value);
+//   const handleEmailChange = (e: {
+//     target: { value: SetStateAction<string> };
+//   }) => setEmail(e.target.value);
+//   const handleNameChange = (e: { target: { value: SetStateAction<string> } }) =>
+//     setName(e.target.value);
+//   const handleMessageChange = (e: {
+//     target: { value: SetStateAction<string> };
+//   }) => setMessage(e.target.value);
 
-  const isError = message === "";
+//   const isError = message === "";
   const {
     handleSubmit,
     register,
     formState: { errors, isSubmitting },
   } = useForm();
-  function onSubmit(values: any) {
+  function onSubmit(data: any) {
     return new Promise<void>((resolve) => {
-      setTimeout(() => {
-        alert(JSON.stringify(values, null, 2));
+    //   setTimeout(() => {
+
+        alert(JSON.stringify(data, null, 2));
         resolve();
-      }, 3000);
+    //   }, 1000);
     });
   }
   return (
@@ -55,8 +56,8 @@ const ContactForm = forwardRef((props: ContactProps, ref: any) => {
             {...register("name")}
             id="name"
             type="text"
-            value={name}
-            onChange={handleNameChange}
+            // value={name}
+            // onChange={handleNameChange}
           />
         </FormControl>
         <FormControl>
@@ -64,23 +65,22 @@ const ContactForm = forwardRef((props: ContactProps, ref: any) => {
           <Input
             {...register("email")}
             type="email"
-            value={email}
-            onChange={handleEmailChange}
+            // value={email}
+            // onChange={handleEmailChange}
           />
         </FormControl>
-        <FormControl>
+        <FormControl isRequired>
           <FormLabel id="message">Message</FormLabel>
           <Textarea
-            isInvalid={isError}
-            isRequired
-            {...register("message", {
+            // isInvalid={isError}
+            {...register("messag", {
               required: "This is required",
             })}
-            value={message}
-            onChange={handleMessageChange}
+            // value={message}
+            // onChange={handleMessageChange}
             resize="vertical"
           />
-          {!isError ? (
+          {!(errors.messag) ? (
             <FormHelperText>
               Enter the message you would like to send me.
             </FormHelperText>
@@ -90,7 +90,7 @@ const ContactForm = forwardRef((props: ContactProps, ref: any) => {
         </FormControl>
         <Button
           mt={4}
-          colorScheme="teal"
+        //   colorScheme="teal"
           isLoading={isSubmitting}
           type="submit"
         >

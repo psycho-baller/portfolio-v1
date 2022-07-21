@@ -15,6 +15,7 @@ import InfoButton from "../components/infoButton";
 interface NavBarProps {
   currentPage: number;
   book: any;
+  onClick: () => void;
 }
 
 export default function Navbar(props: NavBarProps) {

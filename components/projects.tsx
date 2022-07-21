@@ -40,6 +40,7 @@ const Project = forwardRef((props: ProjectProps, ref: any) => {
         layout="fill"
         objectFit="cover"
         quality={100}
+        alt={props.name}
       />
       <Container className="z-0">
         <Heading className="pt-1 pb-1">{props.name}</Heading>

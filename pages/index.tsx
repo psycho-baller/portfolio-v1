@@ -26,16 +26,18 @@ export default function Home() {
 
   return (
     <div>
-      <div
-        onClick={() => {
-          setFavicon((favicon) => !favicon);
-        }}
-      >
+      <div>
         <Head>
           <link rel="icon" href={favicon ? "/logo/r.svg" : "/logo/u.svg"} />
           <title>Rami Maalouf&apos;s portfolio</title>
         </Head>
-        <Navbar book={book} currentPage={currentPage}></Navbar>
+        <Navbar
+          book={book}
+          currentPage={currentPage}
+          onClick={() => {
+            setFavicon((favicon) => !favicon);
+          }}
+        ></Navbar>
         {/* https://github.com/Nodlik/react-pageflip */}
         {/* @ts-ignore*/}
         <HTMLFlipBook
