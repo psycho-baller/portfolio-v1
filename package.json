@@ -13,6 +13,7 @@
     "@chakra-ui/react": "^2.2.1",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
+    "@notionhq/client": "^2.1.0",
     "framer-motion": "^6.4.3",
     "interweave": "^13.0.0",
     "mdb-react-ui-kit": "^4.0.0",
