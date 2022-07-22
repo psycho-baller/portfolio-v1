@@ -16,12 +16,12 @@ const AboutMe = forwardRef((props: AboutMeProps, ref: any) => {
           Who am I?
         </Heading>
         <Text>
-          I&apos;m a passionate explorer who values the connections I make through
-          the unique experiences I go through with them. I believe in balance so
-          I try not to overdo/underdo things and try to maximize (make the best
-          of) my experience with everything I do. I also like to balance my
-          hobbies which are: programming, socialization, reading, all kinds of
-          sports, expanding my knowledge in psychology, philosophy, and
+          I&apos;m a passionate explorer who values the connections I make
+          through the unique experiences I go through with them. I believe in
+          balance so I try not to overdo/underdo things and try to maximize
+          (make the best of) my experience with everything I do. I also like to
+          balance my hobbies which are: programming, socialization, reading, all
+          kinds of sports, expanding my knowledge in psychology, philosophy, and
           obviously, the tech world.
         </Text>
         <Heading as="h3" size="md" className="pt-4">
@@ -31,6 +31,22 @@ const AboutMe = forwardRef((props: AboutMeProps, ref: any) => {
           A well lit balcony or garden, playing boardgames with your closest
           friends, laughing, forgetting about all the worries that constantly
           haunt our thoughts and just living in the moment
+        </Text>
+        <Heading as="h3" size="md" className="pt-4">
+          What am I currently working on?
+        </Heading>
+        <Text>
+          I am currently pursuing a degree in Computer Science with a minor in
+          Data Science at the University of Calgary. During this summer, I took
+          2 courses and started learning NextJS on the daily. After around 4
+          months of constant web development, I feel ready to start finding
+          internships.
+        </Text>
+        <Heading as="h3" size="md" className="pt-4">
+          What are my future plans?
+        </Heading>
+        <Text>
+          For the coming fall semester, I wanna focus on data science and analysis. Then from that I start dabbling with ML and AI.
         </Text>
       </Container>
     </div>

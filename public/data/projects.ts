@@ -70,7 +70,7 @@ const projects = [
     summary: "A script that checks for open research opportunities",
     aim: "Automates the process of constantly checking if there are research participation opportunities which is one of the requirements for 3 intro Psychology courses in University of Calgary.",
     impact:
-      "Saved my friend's and I some time and inspired one of my friends to start learning web scraping.",
+      "Saved my friends and I some time and inspired one of my friends to start learning web scraping.",
     learned:
       "This project counter-intuitively taught me the limitless possibilities of APIs since they're basically an 'official' way of web scraping (GETing data off the web)",
     image: "open-seat-finder",
