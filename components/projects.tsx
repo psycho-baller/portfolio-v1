@@ -13,6 +13,8 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import YoutubeEmbed from "../components/ytEmbed";
+import { motion } from "framer-motion";
+import { lClickables, rClickables } from "../animations/clickables";
 
 interface ProjectProps {
   //   children: React.ReactNode;
@@ -53,12 +55,44 @@ const Project = forwardRef((props: ProjectProps, ref: any) => {
             setOpacity("opacity-10");
           }}
         >
-          <Button>
-            <a href={props.github}>Github</a>
+          <Button
+            as={motion.div}
+            initial="initial"
+            animate="animate"
+            whileHover="hover"
+            whileTap="tap"
+            variants={lClickables}
+          >
+            <motion.a
+              initial="initial"
+              animate="animate"
+              whileHover="hover"
+              whileTap="tap"
+              variants={lClickables}
+              href={props.github}
+            >
+              Github
+            </motion.a>
           </Button>
           {props.website ? (
-            <Button>
-              <a href={props.website}>Website</a>
+            <Button
+              as={motion.div}
+              initial="initial"
+              animate="animate"
+              whileHover="hover"
+              whileTap="tap"
+              variants={rClickables}
+            >
+              <motion.a
+                initial="initial"
+                animate="animate"
+                whileHover="hover"
+                whileTap="tap"
+                variants={rClickables}
+                href={props.website}
+              >
+                Website
+              </motion.a>
             </Button>
           ) : null}
         </ButtonGroup>

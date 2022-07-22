@@ -41,7 +41,7 @@ const projects = [
     languages: ["TypeScript React", "TypeScript"],
     date: "2022-06",
     //   type: "Project Type",
-    technologies: ["Next.js", "ChakraUI", "tailwindcss", "framer-motion"],
+    technologies: ["Next.js", "Chakra-UI", "tailwindcss", "framer-motion"],
     wakatime:
       "<a href='https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/b4387a1e-0164-4bec-bd52-235384399c34'><img src='https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/b4387a1e-0164-4bec-bd52-235384399c34.svg?style=flat-square' alt='wakatime'></a>",
   },

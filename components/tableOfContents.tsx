@@ -12,6 +12,7 @@ import {
 import { forwardRef, useRef } from "react";
 import projects from "../public/data/projects";
 import {motion} from "framer-motion";
+import { rClickables } from "../animations/clickables";
 interface TableOfContentProps {
   children: React.ReactNode;
   book: any;
@@ -25,7 +26,7 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
   return (
     <Container className="page page-cover" ref={ref} data-density="hard">
       <Stack className="text-2xl" shouldWrapChildren={true} spacing={4}>
-        <Heading as="h1">{props.children}</Heading>
+        <Heading pt={4} pb={1} as="h1">{props.children}</Heading>
         <Flex>
           <Box>
             <p>Intro</p>
@@ -37,12 +38,17 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
         </Flex>
         <Flex>
           {/* @ts-ignore */}
-          <p
+          <motion.p
+            initial="initial"
+            animate="animate"
+            whileHover="hover"
+            whileTap="tap"
+            variants={rClickables}
             onClick={() => props.book.current.pageFlip().flip(2)}
             className="cursor-pointer"
           >
             Projects
-          </p>
+          </motion.p>
           <Spacer />
           <Box>
             <Text> 1 </Text>
@@ -53,11 +59,12 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
           {projects.map((project: ProjectProps, index: number) => (
             <Box key={index}>
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ type: "spring", stiffness: 500 }}
-                whileHover={{ scale: 1.1 }}
-                onClick={() => props.book.current.pageFlip().flip(index + 3)}
+                initial="initial"
+                animate="animate"
+                whileHover="hover"
+                whileTap="tap"
+                variants={rClickables}
+                onClick={() => props.book.current.pageFlip().flip(index + 2)}
               >
                 <Heading className="cursor-pointer" as="h3" size="">
                   {project.name}
@@ -68,26 +75,38 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
           ))}
         </Stack>
         <Flex>
-          <p
-            onClick={() => props.book.current.pageFlip().flip(numOfProjects)}
+          <motion.p
+            initial="initial"
+            animate="animate"
+            whileHover="hover"
+            whileTap="tap"
+            variants={rClickables}
+            onClick={() =>
+              props.book.current.pageFlip().flip(numOfProjects + 2)
+            }
             className="cursor-pointer"
           >
             About Me
-          </p>
+          </motion.p>
           <Spacer />
           <Box>
             <Text> {numOfProjects + 1} </Text>
           </Box>
         </Flex>
         <Flex>
-          <p
+          <motion.p
+            initial="initial"
+            animate="animate"
+            whileHover="hover"
+            whileTap="tap"
+            variants={rClickables}
             onClick={() =>
-              props.book.current.pageFlip().flip(numOfProjects + 1)
+              props.book.current.pageFlip().flip(numOfProjects + 3)
             }
             className="cursor-pointer"
           >
             Contact
-          </p>
+          </motion.p>
           <Spacer />
           <Box>
             <Text> {numOfProjects + 2} </Text>

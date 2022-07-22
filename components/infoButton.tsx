@@ -25,8 +25,8 @@ const InfoButton = () => {
         <PopoverContent>
           <PopoverArrow />
           <PopoverCloseButton />
-          <PopoverHeader>Welcome!</PopoverHeader>
-          <PopoverBody>This website is still under construction</PopoverBody>
+          <PopoverHeader>Hey!</PopoverHeader>
+          <PopoverBody>This is my boooked themed personal/portfolio website. If you have any suggestions on what I could do to improve my website, please feel free to contact me through the contact form at the end of the book or through email or linkedIn (links are in the cover page)</PopoverBody>
           <PopoverFooter>V1.0</PopoverFooter>
         </PopoverContent>
       </Popover>

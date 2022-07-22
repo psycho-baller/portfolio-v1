@@ -13,6 +13,9 @@ import {
 import { forwardRef } from "react";
 import { useForm } from "react-hook-form";
 import { useToast } from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import { rClickables } from "../animations/clickables";
+
 
 interface ContactProps {
   children: React.ReactNode;
@@ -62,9 +65,8 @@ const ContactForm = forwardRef((props: ContactProps, ref: any) => {
     // });
   }
   return (
-    <VStack ref={ref}>
+    <VStack ref={ref} p={4}>
       <Heading p={2}>{props.children}</Heading>
-
 
       <form action="" onSubmit={handleSubmit(onSubmit)}>
         <FormControl>
@@ -98,12 +100,31 @@ const ContactForm = forwardRef((props: ContactProps, ref: any) => {
               Enter the message you would like to send me.
             </FormHelperText>
           )}
-          {errors.message &&  <FormErrorMessage>{errors.message.message}</FormErrorMessage>}
-
-          
+          {errors.message && (
+            <FormErrorMessage>{errors.message.message}</FormErrorMessage>
+          )}
         </FormControl>
-        <Button mt={4} isLoading={isSubmitting} type="submit">
-          Submit
+        <Button
+          as={motion.div}
+          initial="initial"
+          animate="animate"
+          whileHover="hover"
+          whileTap="tap"
+          variants={rClickables}
+          mt={4}
+          isLoading={isSubmitting}
+          type="submit"
+          className="cursor-pointer"
+        >
+          <motion.p
+            initial="initial"
+            animate="animate"
+            whileHover="hover"
+            whileTap="tap"
+            variants={rClickables}
+          >
+            Submit
+          </motion.p>
         </Button>
       </form>
     </VStack>

@@ -7,17 +7,20 @@ import { AiFillGithub } from "react-icons/ai";
 import { RiLinkedinFill } from "react-icons/ri";
 import { IoIosPaper } from "react-icons/io";
 import Link from "next/link";
+import {lClickables} from "../animations/clickables";
+
 interface introCoverProps {
   children: React.ReactNode;
 }
 
 const IntroCoverPage = forwardRef((props: introCoverProps, ref: any) => {
   const ferrisOfTraits = [
-    "Web Developer",
     "Creative",
     "Passionate",
     "Energetic",
     "Weirdo",
+    "Web Developer",
+    "UCalgary Student",
   ];
 
   const ferrisOfTechs = [
@@ -38,79 +41,127 @@ const IntroCoverPage = forwardRef((props: introCoverProps, ref: any) => {
     "scss.svg",
   ];
 
+  // const contactIcons = [
+  //   {
+  //     icon: <EmailIcon />,
+  //     link: "mailto:rami.rami@ucalgary.ca",
+  //     name: "Email",
+  //     index: 0,
+  //   },
+  //   {
+  //     icon: <AiFillGithub />,
+  //     link: "https://github.com/psycho-baller",
+  //     name: "Github",
+  //     index: 1,
+  //   },
+  //   {
+  //     icon: <RiLinkedinFill />,
+  //     link: "https://www.linkedin.com/in/rami--maalouf/",
+  //     name: "LinkedIn",
+  //     index: 2,
+  //   },
+  // ];
+
+
   return (
     <Container ref={ref} data-density="hard" className="overflow-hidden">
-      <Heading>{props.children}</Heading>
-      <VStack className="absolute left-0 right-0">
-        <a href="mailto:rami.rami@ucalgary.ca">
+      <Heading p={3}>{props.children}</Heading>
+      <VStack spacing={2} className="absolute left-0 right-0">
+        <motion.a
+          initial="initial"
+          animate="animate"
+          whileHover="hover"
+          whileTap="tap"
+          variants={lClickables}
+          href="mailto:rami.rami@ucalgary.ca"
+        >
           <IconButton
             variant="outline"
             colorScheme="yellow"
             aria-label="Send email"
             icon={<EmailIcon />}
           />
-        </a>
-        <a href="https://github.com/psycho-baller">
+        </motion.a>
+        <motion.a
+          initial="initial"
+          animate="animate"
+          whileHover="hover"
+          whileTap="tap"
+          variants={lClickables}
+          href="https://github.com/psycho-baller"
+        >
           <IconButton
             variant="outline"
             colorScheme="yellow"
             aria-label="github"
             icon={<AiFillGithub />}
           />
-        </a>
-        <a href="https://www.linkedin.com/in/rami--maalouf/">
+        </motion.a>
+        <motion.a
+          initial="initial"
+          animate="animate"
+          whileHover="hover"
+          whileTap="tap"
+          variants={lClickables}
+          href="https://www.linkedin.com/in/rami--maalouf/"
+        >
           <IconButton
             variant="outline"
             colorScheme="yellow"
             aria-label="linkedin"
             icon={<RiLinkedinFill />}
           />
-        </a>
-        <Link href="/resume.pdf" passHref >
-          <a target="_blank">
+        </motion.a>
+        <Link href="/resume.pdf" passHref>
+          <motion.a
+            initial="initial"
+            animate="animate"
+            whileHover="hover"
+            whileTap="tap"
+            variants={lClickables}
+            target="_blank"
+          >
             <IconButton
               variant="outline"
               colorScheme="yellow"
               aria-label="resume"
               icon={<IoIosPaper />}
             />
-          </a>
+          </motion.a>
         </Link>
       </VStack>
 
-      {ferrisOfTraits.map((trait, index: number) => {
-        return (
-          <motion.div
-            key={index + 1}
-            className="ferris-wheel"
-            initial="initial"
-            animate={["animate", "initialHide"]}
-            exit="exit"
-            variants={{
-              animate: {
-                rotate: 360,
-                transition: {
-                  duration: ferrisOfTraits.length,
-                  loop: Infinity,
-                  delay: index + 1,
-                  // ease: "linear",
-                },
+      {ferrisOfTraits.map((trait, index: number) => (
+        <motion.div
+          key={index + 1}
+          className="ferris-wheel"
+          initial="initial"
+          animate={["animate", "initialHide"]}
+          exit="exit"
+          variants={{
+            animate: {
+              rotate: 360,
+              transition: {
+                duration: ferrisOfTraits.length,
+                repeat: Infinity,
+                delay: index + 1,
+                // ease: "linear",
               },
-              initial: {
-                opacity: 0,
+            },
+            initial: {
+              opacity: 0,
+            },
+            initialHide: {
+              opacity: 1,
+              transition: {
+                delay: index + 1,
               },
-              initialHide: {
-                opacity: 1,
-                transition: {
-                  delay: index + 1,
-                },
-              },
-            }}
-          >
-            <Text className="left-center">{trait}</Text>
-          </motion.div>
-        );
-      }, [])}
+            },
+          }}
+        >
+          <Text className="left-center">{trait}</Text>
+        </motion.div>
+      ))}
 
       {ferrisOfTechs.map((tech, index: number) => {
         return (
@@ -125,7 +176,7 @@ const IntroCoverPage = forwardRef((props: introCoverProps, ref: any) => {
                 rotate: -360,
                 transition: {
                   duration: ferrisOfTechs.length,
-                  loop: Infinity,
+                  repeat: Infinity,
                   delay: index + 1,
                   ease: "linear",
                 },

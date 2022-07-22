@@ -10,6 +10,8 @@ export const logoR = {
     x: 0,
     transition: {
       duration: 0.5,
+      type: "spring",
+      stiffness: 150,
     },
   },
   hover: {
@@ -29,6 +31,8 @@ export const logoU = {
     y: 0,
     transition: {
       duration: 0.5,
+      type: "spring",
+      stiffness: 150,
     },
   },
   hover: {
@@ -57,6 +61,8 @@ export const logo = {
     transition: {
       when: "beforeChildren",
       staggerChildren: 0.3,
+      type: "spring",
+      stiffness: 500,
     },
   },
   tap: {
