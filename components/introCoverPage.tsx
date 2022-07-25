@@ -64,7 +64,7 @@ const IntroCoverPage = forwardRef((props: introCoverProps, ref: any) => {
 
 
   return (
-    <Container ref={ref} data-density="hard" className="overflow-hidden">
+    <VStack ref={ref} data-density="hard" className="overflow-hidden">
       <Heading p={3}>{props.children}</Heading>
       <VStack spacing={2} className="absolute left-0 right-0">
         <motion.a
@@ -203,7 +203,7 @@ const IntroCoverPage = forwardRef((props: introCoverProps, ref: any) => {
           </motion.div>
         );
       }, [])}
-    </Container>
+    </VStack>
   );
 });
 IntroCoverPage.displayName = "IntroCoverPage";
