@@ -71,7 +71,7 @@ const projects = [
       "Receive a notification when a new research participation study is up",
     aim: "Automates the process of constantly checking if there are research participation opportunities which is one of the requirements for 3 intro Psychology courses in University of Calgary. Instead, you get an email notification when there is a new research participation opportunity.",
     impact:
-      "Saved my friends and I some time and inspired one of my friends to start learning web scraping.",
+      "Saved my classmates and I some time and inspired one of my friends to start learning web scraping.",
     learned:
       "Learned how to setup and use an SQL database on a server. In addition, this project counter-intuitively taught me the limitless possibilities of APIs since they're basically an 'official' way of web scraping (GETing data off the web)",
     image: "open-seat-finder",
