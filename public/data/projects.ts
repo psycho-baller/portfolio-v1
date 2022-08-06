@@ -26,7 +26,7 @@ const projects = [
       '<a href="https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/5fb9e2d8-27fe-465b-9c13-9511bff79b9a"><img src="https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/5fb9e2d8-27fe-465b-9c13-9511bff79b9a.svg?style=flat-square" alt="wakatime"></a>',
   },
   {
-    name: "HashTable Implementation",
+    name: "HashMap Implementation",
     summary:
       "An interactive website that visually shows how data gets stored in HashTables",
     aim: "After completing my assignment for my DS & A course, which was about implementing a hashTable in Java, I decided to make a website that would visually show how data gets stored in HashTables.",
@@ -66,21 +66,32 @@ const projects = [
       "<a href='https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/cffd4999-0eb2-4e56-901a-a9897888ee03'><img src='https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/cffd4999-0eb2-4e56-901a-a9897888ee03.svg' alt='wakatime'></a>",
   },
   {
-    name: "Open Seat Finder",
-    summary: "A script that checks for open research opportunities",
-    aim: "Automates the process of constantly checking if there are research participation opportunities which is one of the requirements for 3 intro Psychology courses in University of Calgary.",
+    name: "Open Seat Notifier",
+    summary:
+      "Receive a notification when a new research participation study is up",
+    aim: "Automates the process of constantly checking if there are research participation opportunities which is one of the requirements for 3 intro Psychology courses in University of Calgary. Instead, you get an email notification when there is a new research participation opportunity.",
     impact:
       "Saved my friends and I some time and inspired one of my friends to start learning web scraping.",
     learned:
-      "This project counter-intuitively taught me the limitless possibilities of APIs since they're basically an 'official' way of web scraping (GETing data off the web)",
+      "Learned how to setup and use an SQL database on a server. In addition, this project counter-intuitively taught me the limitless possibilities of APIs since they're basically an 'official' way of web scraping (GETing data off the web)",
     image: "open-seat-finder",
     video: "",
     github: "https://github.com/psycho-baller/UCalgary-research-participation",
-    website: "",
-    languages: ["Python"],
+    website: "https://open-seat-notifier.vercel.app/",
+    languages: ["TypeScript React", "Python"],
     date: "2021-11",
     //     type: "Project Type",
-    technologies: ["BeautifulSoup4", "Selenium Webdriver"],
+    technologies: [
+      "PostgreSQL",
+      "Prisma",
+      "Next.js",
+      "Selenium",
+      "Selenium Webdriver",
+      "Chakra-UI",
+      "tailwindcss",
+      "framer-motion",
+      "EmailJS",
+    ],
     wakatime: "",
   },
 ];
