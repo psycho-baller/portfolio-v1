@@ -74,9 +74,9 @@ const projects = [
       "Saved my classmates and I some time and inspired one of my friends to start learning web scraping.",
     learned:
       "Learned how to setup and use an SQL database on a server. In addition, this project counter-intuitively taught me the limitless possibilities of APIs since they're basically an 'official' way of web scraping (GETing data off the web)",
-    image: "open-seat-finder",
+    image: "open-seat-notifier",
     video: "",
-    github: "https://github.com/psycho-baller/UCalgary-research-participation",
+    github: "https://github.com/psycho-baller/open-seat-notifier",
     website: "https://open-seat-notifier.vercel.app/",
     languages: ["TypeScript React", "Python"],
     date: "2021-11",
