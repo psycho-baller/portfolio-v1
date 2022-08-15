@@ -68,7 +68,7 @@ const projects = [
   {
     name: "Open Seat Notifier",
     summary:
-      "Receive a notification when a new research participation study is up",
+      "Get notified when a new research participation study is up",
     aim: "Automates the process of constantly checking if there are research participation opportunities which is one of the requirements for 3 intro Psychology courses in University of Calgary. Instead, you get an email notification when there is a new research participation opportunity.",
     impact:
       "Saved my classmates and I some time and inspired one of my friends to start learning web scraping.",
