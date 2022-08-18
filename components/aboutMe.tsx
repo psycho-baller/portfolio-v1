@@ -46,7 +46,20 @@ const AboutMe = forwardRef((props: AboutMeProps, ref: any) => {
           What are my future plans?
         </Heading>
         <Text>
-          For the coming fall semester, I wanna focus on data science and analysis. Then from that I start dabbling with ML and AI.
+          For the coming fall semester, I wanna focus on data science and
+          analysis. Then from there I start dabbling with ML and AI. I'm also
+          looking into freelancing and creating youtube videos (tutorals) on
+          things that I had to learn myself because there wasn't any tutorial on
+          it. My first one just got released and it's about how to make a ferris
+          wheel effect in ReactJS/NextJS using framer motion. Feel free to{" "}
+          <a
+            href="https://youtu.be/25zjPEMxwbk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            check it out
+          </a>
+          !
         </Text>
       </Container>
     </div>

@@ -1,5 +1,34 @@
 const projects = [
   {
+    name: "Open Seat Notifier",
+    summary: "Get notified when a new research participation study is up",
+    aim: "Automates the process of constantly checking if there are research participation opportunities which is one of the requirements for 3 intro Psychology courses in University of Calgary. Instead, you get an email notification when there is a new research participation opportunity.",
+    impact:
+      "Saved my classmates and I some time and inspired one of my friends to start learning web scraping.",
+    learned:
+      "Learned how to setup and use an SQL database on a server and how to encrypt and decrypt the data. In addition, this project counter-intuitively taught me the limitless possibilities of APIs since they're basically an 'official' way of web scraping (GETing data off the web)",
+    image: "open-seat-notifier",
+    video: "Hs70CLeK1OI",
+    github: "https://github.com/psycho-baller/open-seat-notifier",
+    website: "https://open-seat-notifier.vercel.app/",
+    languages: ["TypeScript React", "Python"],
+    date: "2021-11",
+    //     type: "Project Type",
+    technologies: [
+      "PostgreSQL",
+      "Prisma",
+      "Next.js",
+      "Selenium",
+      "Selenium Webdriver",
+      "Chakra-UI",
+      "tailwindcss",
+      "framer-motion",
+      "EmailJS",
+    ],
+    wakatime:
+      '<a href="https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/790ea500-6623-4ca0-8d24-29c31f9bb2c5"><img src="https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/790ea500-6623-4ca0-8d24-29c31f9bb2c5.svg?style=flat-square" alt="wakatime"></a>',
+  },
+  {
     name: "Knock Joke Heaven",
     summary:
       "A website that generates and shows knock-knock jokes in the most creative way",
@@ -35,7 +64,7 @@ const projects = [
     learned:
       "I applied everything I learned in that course and everything I learned in Next.js to create this website with the help of the front end technologies specified below to speed up the production process since I had to start studying for my finals for that course lol.",
     image: "hash-table",
-    video: "jdPdvyUBAyA",
+    video: "En0LMg91Yas",
     github: "https://github.com/psycho-baller/algorithm-visualization",
     website: "https://hashmap-implementation.vercel.app/",
     languages: ["TypeScript React", "TypeScript"],
@@ -64,35 +93,6 @@ const projects = [
     technologies: ["JavaFX", "JUnit5", "SceneBuilder"],
     wakatime:
       "<a href='https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/cffd4999-0eb2-4e56-901a-a9897888ee03'><img src='https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/cffd4999-0eb2-4e56-901a-a9897888ee03.svg' alt='wakatime'></a>",
-  },
-  {
-    name: "Open Seat Notifier",
-    summary:
-      "Get notified when a new research participation study is up",
-    aim: "Automates the process of constantly checking if there are research participation opportunities which is one of the requirements for 3 intro Psychology courses in University of Calgary. Instead, you get an email notification when there is a new research participation opportunity.",
-    impact:
-      "Saved my classmates and I some time and inspired one of my friends to start learning web scraping.",
-    learned:
-      "Learned how to setup and use an SQL database on a server. In addition, this project counter-intuitively taught me the limitless possibilities of APIs since they're basically an 'official' way of web scraping (GETing data off the web)",
-    image: "open-seat-notifier",
-    video: "",
-    github: "https://github.com/psycho-baller/open-seat-notifier",
-    website: "https://open-seat-notifier.vercel.app/",
-    languages: ["TypeScript React", "Python"],
-    date: "2021-11",
-    //     type: "Project Type",
-    technologies: [
-      "PostgreSQL",
-      "Prisma",
-      "Next.js",
-      "Selenium",
-      "Selenium Webdriver",
-      "Chakra-UI",
-      "tailwindcss",
-      "framer-motion",
-      "EmailJS",
-    ],
-    wakatime: "",
   },
 ];
 
