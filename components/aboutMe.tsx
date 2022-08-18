@@ -57,6 +57,7 @@ const AboutMe = forwardRef((props: AboutMeProps, ref: any) => {
             href="https://youtu.be/25zjPEMxwbk"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-green-300 hover:text-green-400 hover:animate-pulse"
           >
             check it out
           </a>
