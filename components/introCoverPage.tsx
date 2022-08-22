@@ -3,7 +3,7 @@ import { Heading, Container, Text, IconButton, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { EmailIcon } from "@chakra-ui/icons";
-import { AiFillGithub } from "react-icons/ai";
+import { AiFillGithub, AiFillYoutube } from "react-icons/ai";
 import { RiLinkedinFill } from "react-icons/ri";
 import { IoIosPaper } from "react-icons/io";
 import Link from "next/link";
@@ -110,6 +110,21 @@ const IntroCoverPage = forwardRef((props: introCoverProps, ref: any) => {
             colorScheme="yellow"
             aria-label="linkedin"
             icon={<RiLinkedinFill />}
+          />
+        </motion.a>
+        <motion.a
+          initial="initial"
+          animate="animate"
+          whileHover="hover"
+          whileTap="tap"
+          variants={lClickables}
+          href="https://www.youtube.com/channel/UCf9CoIzXxFcwlwaNuN5_1BQ"
+        >
+          <IconButton
+            variant="outline"
+            colorScheme="yellow"
+            aria-label="youtube"
+            icon={<AiFillYoutube />}
           />
         </motion.a>
         <Link href="/resume.pdf" passHref>
