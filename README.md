@@ -11,8 +11,11 @@
 
 ## Future plans
 
-- [] use localStorage to store page state
-- [] sort projects by different ways
-- [] read/unread in table of contents
-- [] have a slider that specifies how many projects do they wanna see
-
+- [ ] use localStorage to store page state
+- [ ] sort projects by different ways
+- [ ] read/unread in table of contents
+- [ ] have a slider that specifies how many projects do they wanna see
+- [ ] 2nd TOC
+- [ ] Poems
+- [ ] Blogs
+- [ ] Life Checklist
