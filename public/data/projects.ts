@@ -55,7 +55,7 @@ const projects = [
       '<a href="https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/5fb9e2d8-27fe-465b-9c13-9511bff79b9a"><img src="https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/5fb9e2d8-27fe-465b-9c13-9511bff79b9a.svg?style=flat-square" alt="wakatime"></a>',
   },
   {
-    name: "HashMap Implementation",
+    name: "HashMap Visualization",
     summary:
       "An interactive website that visually shows how data gets stored in HashTables",
     aim: "After completing my assignment for my DS & A course, which was about implementing a hashTable in Java, I decided to make a website that would visually show how data gets stored in HashTables.",
