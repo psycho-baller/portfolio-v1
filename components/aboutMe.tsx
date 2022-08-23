@@ -8,7 +8,6 @@ interface AboutMeProps {
 const AboutMe = forwardRef((props: AboutMeProps, ref: any) => {
   return (
     <div
-      id="about-me"
       className="page page-cover"
       ref={ref}
       data-density="hard"
