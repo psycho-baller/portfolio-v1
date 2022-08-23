@@ -4,9 +4,9 @@ import { logo } from "../animations/logo";
 import { logoU } from "../animations/logo";
 import { name } from "../animations/logo";
 
-export default function Logo() {
+export default function Logo({ book } : { book: any }) {
   function returnHome() {
-    window.location.href = "/";
+    book.current.pageFlip().flip(0);
   }
 
   return (

@@ -65,7 +65,7 @@ const ContactForm = forwardRef((props: ContactProps, ref: any) => {
     // });
   }
   return (
-    <VStack ref={ref} p={4}>
+    <VStack id="contact-me" ref={ref} p={4}>
       <Heading p={2}>{props.children}</Heading>
 
       <form action="" onSubmit={handleSubmit(onSubmit)}>

@@ -22,7 +22,7 @@ export default function Navbar(props: NavBarProps) {
   const numOfPages = projects.length + 3;
   return (
     <div className="navbar">
-      <Logo />
+      <Logo book={book}/>
       <div className="px-2">
         <Button
           as={motion.div}

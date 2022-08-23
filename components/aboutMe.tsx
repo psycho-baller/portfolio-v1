@@ -7,7 +7,12 @@ interface AboutMeProps {
 
 const AboutMe = forwardRef((props: AboutMeProps, ref: any) => {
   return (
-    <div className="page page-cover" ref={ref} data-density="hard">
+    <div
+      id="about-me"
+      className="page page-cover"
+      ref={ref}
+      data-density="hard"
+    >
       <Container className="page-content">
         <Heading as="h1" className="pt-2 pb-1">
           {props.children}

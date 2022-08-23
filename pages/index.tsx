@@ -14,17 +14,40 @@ import TableOfContents from "../components/tableOfContents";
 import Navbar from "../components/navbar";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 import ContactForm from "../components/contactForm";
 
 export default function Home() {
   const book = useRef();
-  // @ts-ignore
-  const [currentPage, setCurrentPage] = useState(0);
+  const router = useRouter();
+
+  const goTo = router.query.goTo as string | undefined;
+  var goToPage: number = 0 as number;
+  if (goTo !== undefined && book !== undefined) {
+    if (goTo === "toc") {
+      goToPage = 1;
+    }
+    else if (goTo === "projects") {
+      goToPage = 2;
+    }
+    else if (goTo === "about") {
+      goToPage = projects.length + 2;
+    }
+    else if (goTo === "contact") {
+      goToPage = projects.length + 3;
+    }
+    //@ts-ignore
+    book.current.pageFlip().turnToPage(goToPage);
+    router.query = {};
+  }
+  const [currentPage, setCurrentPage] = useState(goToPage);
+
+
   const [favicon, setFavicon] = useState(true);
 
   useEffect(() => {
-    // book.?current.pageFlip().flipTo(currentPage);
+    // book?.current?.pageFlip().flipTo(currentPage);
     setFavicon((favicon) => !favicon);
   }, [currentPage]);
 
