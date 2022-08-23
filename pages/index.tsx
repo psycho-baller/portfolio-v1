@@ -1,21 +1,16 @@
-import { Text } from "@chakra-ui/react";
-import styles from "../styles/index.module.scss";
 import HTMLFlipBook from "react-pageflip";
-import Image from "next/image";
+import { useCallback, useEffect, useRef, useState } from "react";
+import Head from "next/head";
+import { useRouter } from "next/router";
 
 import projects from "../public/data/projects";
 
 // Components:
 import Project from "../components/projects";
 import IntroCoverPage from "../components/introCoverPage";
-import OutroCoverPage from "../components/outroCoverPage";
 import AboutMe from "../components/aboutMe";
 import TableOfContents from "../components/tableOfContents";
 import Navbar from "../components/navbar";
-import { useCallback, useEffect, useRef, useState } from "react";
-import Head from "next/head";
-import { useRouter } from "next/router";
-
 import ContactForm from "../components/contactForm";
 
 export default function Home() {
