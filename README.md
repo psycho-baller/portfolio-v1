@@ -1,5 +1,5 @@
 # Portfolio
-
+[![wakatime](https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/2dbcfef3-1f94-4df4-be46-0faf895cbc24.svg)](https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/2dbcfef3-1f94-4df4-be46-0faf895cbc24)
 ## Structure
 
 - Front cover and page 0(first page): name and basic abt me and cool visuals
