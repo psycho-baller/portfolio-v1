@@ -29,6 +29,45 @@ const projects = [
       '<a href="https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/790ea500-6623-4ca0-8d24-29c31f9bb2c5"><img src="https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/790ea500-6623-4ca0-8d24-29c31f9bb2c5.svg?style=flat-square" alt="wakatime"></a>',
   },
   {
+    name: "Psycho Driver",
+    summary: "Race against a car taught how to drive using neural networks",
+    aim: "Wanted to understand the 'back-end' of AI and specifically neural networks. So I decided to build a self-driving car that learned how to drive using neural networks without any libraries.",
+    impact:
+      "An entertaining way to learn about neural networks, where you can see the car learn how to drive in real-time with the neural networks visualized in learning mode.",
+    learned:
+      "Followed the process of Software Development Life Cycle (SDLC) to build the app from it's small simple features to a full-on complex app made of several simple functionalities. Also, I used Svelte for the first time so I learned the basics of SvelteKit too",
+    image: "psycho-driver",
+    video: "",
+    github: "https://github.com/psycho-baller/self-driving-car",
+    website: "https://psycho-driver.vercel.app/",
+    languages: ["TypeScript"],
+    date: "2022-08",
+    //     type: "Project Type",
+    technologies: ["SvelteKit", "SvelteUI"],
+    wakatime:
+      '<a href="https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/9cdb42ee-e237-443b-9352-f7a5c4e0677d"><img src="https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/9cdb42ee-e237-443b-9352-f7a5c4e0677d.svg" alt="wakatime"></a>',
+  },
+  {
+    name: "HashMap Visualization",
+    summary:
+      "An interactive website that visually shows how data gets stored in HashTables",
+    aim: "After completing my assignment for my DS & A course, which was about implementing a hashTable in Java, I decided to make a website that would visually show how data gets stored in HashTables.",
+    impact:
+      "It helped my classmates fundamentally understand the structure and how HashTables work which helped them complete the assignment",
+    learned:
+      "I applied everything I learned in that course and everything I learned in Next.js to create this website with the help of the front end technologies specified below to speed up the production process since I had to start studying for my finals for that course lol.",
+    image: "hash-table",
+    video: "En0LMg91Yas",
+    github: "https://github.com/psycho-baller/algorithm-visualization",
+    website: "https://hashmap-implementation.vercel.app/",
+    languages: ["TypeScript React", "TypeScript"],
+    date: "2022-06",
+    //   type: "Project Type",
+    technologies: ["Next.js", "Chakra-UI", "tailwindcss", "framer-motion"],
+    wakatime:
+      "<a href='https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/b4387a1e-0164-4bec-bd52-235384399c34'><img src='https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/b4387a1e-0164-4bec-bd52-235384399c34.svg?style=flat-square' alt='wakatime'></a>",
+  },
+  {
     name: "Knock Joke Heaven",
     summary:
       "A website that generates and shows knock-knock jokes in the most creative way",
@@ -53,26 +92,6 @@ const projects = [
     ],
     wakatime:
       '<a href="https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/5fb9e2d8-27fe-465b-9c13-9511bff79b9a"><img src="https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/5fb9e2d8-27fe-465b-9c13-9511bff79b9a.svg?style=flat-square" alt="wakatime"></a>',
-  },
-  {
-    name: "HashMap Visualization",
-    summary:
-      "An interactive website that visually shows how data gets stored in HashTables",
-    aim: "After completing my assignment for my DS & A course, which was about implementing a hashTable in Java, I decided to make a website that would visually show how data gets stored in HashTables.",
-    impact:
-      "It helped my classmates fundamentally understand the structure and how HashTables work which helped them complete the assignment",
-    learned:
-      "I applied everything I learned in that course and everything I learned in Next.js to create this website with the help of the front end technologies specified below to speed up the production process since I had to start studying for my finals for that course lol.",
-    image: "hash-table",
-    video: "En0LMg91Yas",
-    github: "https://github.com/psycho-baller/algorithm-visualization",
-    website: "https://hashmap-implementation.vercel.app/",
-    languages: ["TypeScript React", "TypeScript"],
-    date: "2022-06",
-    //   type: "Project Type",
-    technologies: ["Next.js", "Chakra-UI", "tailwindcss", "framer-motion"],
-    wakatime:
-      "<a href='https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/b4387a1e-0164-4bec-bd52-235384399c34'><img src='https://wakatime.com/badge/user/33addb7e-f5e6-470b-a55b-0a8babc62ebb/project/b4387a1e-0164-4bec-bd52-235384399c34.svg?style=flat-square' alt='wakatime'></a>",
   },
   {
     name: "Football League Manager",
