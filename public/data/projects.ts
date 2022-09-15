@@ -35,7 +35,7 @@ const projects = [
     impact:
       "An entertaining way to learn about neural networks, where you can see the car learn how to drive in real-time with the neural networks visualized in learning mode.",
     learned:
-      "Followed the process of Software Development Life Cycle (SDLC) to build the app from it's small simple features to a full-on complex app made of several simple functionalities. Also, I used Svelte for the first time so I learned the basics of SvelteKit too",
+      "Followed the process of Software Development Life Cycle (SDLC) to build the app from its small simple features to a full-on complex app made of several simple functionalities. Also, I used Svelte for the first time so I learned the basics of SvelteKit too",
     image: "psycho-driver",
     video: "",
     github: "https://github.com/psycho-baller/self-driving-car",
