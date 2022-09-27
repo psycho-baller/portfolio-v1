@@ -9,7 +9,7 @@ const projects = [
     learned:
       "How to interact with a flask backend (that accesses the database and uses the AdHawk API to capture the images and store them in the database) with the NextJS frontend",
     image: "memor-i-eye.png",
-    video: "Hs70CLeK1OI",
+    video: "",
     github: "https://github.com/NilsIrl/eyes",
     website: "https://memori-eye.vercel.app/",
     languages: ["TypeScript React", "Python"],
