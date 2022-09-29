@@ -66,7 +66,7 @@ const TableOfContents2 = forwardRef((props: TableOfContentProps, ref: any) => {
           </motion.p>
           <Spacer />
           <Box>
-            <Text> {numOfProjects + 2} </Text>
+            <Text> {numOfProjects + 3} </Text>
           </Box>
         </Flex>
         <Flex>
@@ -85,7 +85,7 @@ const TableOfContents2 = forwardRef((props: TableOfContentProps, ref: any) => {
           </motion.p>
           <Spacer />
           <Box>
-            <Text> {numOfProjects + 3} </Text>
+            <Text> {numOfProjects + 4} </Text>
           </Box>
         </Flex>
       </Stack>

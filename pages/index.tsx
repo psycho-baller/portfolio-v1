@@ -26,13 +26,13 @@ export default function Home() {
       goToPage = 1;
     }
     else if (goTo === "projects") {
-      goToPage = 2;
+      goToPage = 3;
     }
     else if (goTo === "about") {
-      goToPage = projects.length + 2;
+      goToPage = projects.length*2 + 3;
     }
     else if (goTo === "contact") {
-      goToPage = projects.length + 3;
+      goToPage = projects.length*2 + 4;
     }
     //@ts-ignore
     book.current.pageFlip().turnToPage(goToPage);

@@ -37,8 +37,9 @@ const InfoButton = () => {
               href="https://github.com/psycho-baller/portfolio"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-green-300 hover:text-green-400 hover:animate-pulse"
             >
-              V1.0
+              V1.1
             </a>
           </PopoverFooter>
         </PopoverContent>
