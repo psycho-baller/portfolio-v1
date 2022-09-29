@@ -15,7 +15,8 @@
 - [ ] sort projects by different ways
 - [ ] read/unread in table of contents
 - [ ] have a slider that specifies how many projects do they wanna see
-- [ ] 2nd TOC
+- [x] 2nd TOC
+- [ ] fav books/tv shows/movies/etc..
 - [ ] Poems
 - [ ] Blogs
 - [ ] Life Checklist

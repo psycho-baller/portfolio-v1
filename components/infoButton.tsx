@@ -29,8 +29,16 @@ const InfoButton = () => {
           <PopoverBody>
             This is my boook themed personal/portfolio website. If you have any
             suggestions on what I could do to improve my website, please feel
-            free to contact me through the contact form at the end of the book
-            or through email or linkedIn (links are in the cover page)
+            free to contact me{" "}
+            <a
+              href="http://rami-maalouf.vercel.app/?goTo=contact"
+              rel="noopener noreferrer"
+              className="text-green-300 hover:text-green-400 hover:animate-pulse"
+            >
+              the contact form at the end of the book
+            </a>{" "}
+            through the contact form at the end of the book or through email or
+            linkedIn (links are in the cover page)
           </PopoverBody>
           <PopoverFooter>
             <a
