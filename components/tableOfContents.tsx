@@ -49,7 +49,7 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
           </motion.p>
           <Spacer />
           <Box>
-            <Text> 1 </Text>
+            <Text> 2-7 </Text>
           </Box>
         </Flex>
 

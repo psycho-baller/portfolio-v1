@@ -59,10 +59,10 @@ const ContactForm = forwardRef((props: ContactProps, ref: any) => {
       });
     }
 
-    //   alert(JSON.stringify({ name, email, message }));
-    //   resolve();
-      //   }, 1000);
-    // });
+      // alert(JSON.stringify({ name, email, message }));
+  //     resolve();
+  //       }, 1000);
+  //   });
   }
   return (
     <VStack ref={ref} p={4}>
@@ -105,12 +105,12 @@ const ContactForm = forwardRef((props: ContactProps, ref: any) => {
           )}
         </FormControl>
         <Button
-          as={motion.div}
-          initial="initial"
-          animate="animate"
-          whileHover="hover"
-          whileTap="tap"
-          variants={rClickables}
+          // as={motion.div}
+          // initial="initial"
+          // animate="animate"
+          // whileHover="hover"
+          // whileTap="tap"
+          // variants={rClickables}
           mt={4}
           isLoading={isSubmitting}
           type="submit"

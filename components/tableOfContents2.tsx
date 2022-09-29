@@ -58,7 +58,7 @@ const TableOfContents2 = forwardRef((props: TableOfContentProps, ref: any) => {
             whileTap="tap"
             variants={rClickables}
             onClick={() =>
-              props.book.current.pageFlip().flip(numOfProjects + 2)
+              props.book.current.pageFlip().flip(numOfProjects + 3)
             }
             className="cursor-pointer"
           >
@@ -66,7 +66,7 @@ const TableOfContents2 = forwardRef((props: TableOfContentProps, ref: any) => {
           </motion.p>
           <Spacer />
           <Box>
-            <Text> {numOfProjects + 1} </Text>
+            <Text> {numOfProjects + 2} </Text>
           </Box>
         </Flex>
         <Flex>
@@ -77,7 +77,7 @@ const TableOfContents2 = forwardRef((props: TableOfContentProps, ref: any) => {
             whileTap="tap"
             variants={rClickables}
             onClick={() =>
-              props.book.current.pageFlip().flip(numOfProjects + 3)
+              props.book.current.pageFlip().flip(numOfProjects + 4)
             }
             className="cursor-pointer"
           >
@@ -85,7 +85,7 @@ const TableOfContents2 = forwardRef((props: TableOfContentProps, ref: any) => {
           </motion.p>
           <Spacer />
           <Box>
-            <Text> {numOfProjects + 2} </Text>
+            <Text> {numOfProjects + 3} </Text>
           </Box>
         </Flex>
       </Stack>
