@@ -12,6 +12,8 @@ import AboutMe from "../components/aboutMe";
 import TableOfContents from "../components/tableOfContents";
 import Navbar from "../components/navbar";
 import ContactForm from "../components/contactForm";
+import TableOfContents2 from "../components/tableOfContents2";
+import projects2 from "../public/data/projects2"
 
 export default function Home() {
   const book = useRef();
@@ -53,10 +55,7 @@ export default function Home() {
           <link rel="icon" href={favicon ? "/logo/r.svg" : "/logo/u.svg"} />
           <title>Rami Maalouf&apos;s portfolio</title>
         </Head>
-        <Navbar
-          book={book}
-          currentPage={currentPage}
-        ></Navbar>
+        <Navbar book={book} currentPage={currentPage}></Navbar>
         {/* https://github.com/Nodlik/react-pageflip */}
         {/* @ts-ignore*/}
         <HTMLFlipBook
@@ -99,9 +98,27 @@ export default function Home() {
             <h1 className="text-7xl">Rami Maalouf</h1>
           </IntroCoverPage>
           <TableOfContents book={book}>Table of Contents</TableOfContents>
+          <TableOfContents2 book={book}>Table of Contents</TableOfContents2>
 
           {/* loop through projects */}
           {projects.map((project, index: number) => (
+            <Project
+              key={index}
+              number={index}
+              name={project.name}
+              image={project.image}
+              video={project.video}
+              github={project.github}
+              website={project.website}
+              aim={project.aim}
+              impact={project.impact}
+              learned={project.learned}
+              languages={project.languages}
+              technologies={project.technologies}
+              wakatime={project.wakatime}
+            />
+          ))}
+          {projects2.map((project, index: number) => (
             <Project
               key={index}
               number={index}

@@ -19,7 +19,7 @@ interface NavBarProps {
 
 export default function Navbar(props: NavBarProps) {
   const { currentPage, book } = props;
-  const numOfPages = projects.length + 3;
+  const numOfPages = projects.length*2 + 3;
   return (
     <div className="navbar">
       <Logo book={book}/>

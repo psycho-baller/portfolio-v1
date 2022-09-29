@@ -2,8 +2,6 @@ import {
   Container,
   Box,
   Flex,
-  Grid,
-  VStack,
   Heading,
   Text,
   Spacer,
@@ -22,7 +20,7 @@ interface ProjectProps {
   summary: string;
 }
 const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
-  const numOfProjects: number = projects.length as number;
+  const numOfProjects: number = projects.length*2 as number;
   return (
     <Container className="page page-cover" ref={ref} data-density="hard">
       <Stack className="text-2xl" shouldWrapChildren={true} spacing={4}>
@@ -64,7 +62,7 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
                 whileHover="hover"
                 whileTap="tap"
                 variants={rClickables}
-                onClick={() => props.book.current.pageFlip().flip(index + 2)}
+                onClick={() => props.book.current.pageFlip().flip(index + 3)}
               >
                 <Heading className="cursor-pointer" as="h3" size="">
                   {project.name}
@@ -74,44 +72,7 @@ const TableOfContents = forwardRef((props: TableOfContentProps, ref: any) => {
             </Box>
           ))}
         </Stack>
-        <Flex>
-          <motion.p
-            initial="initial"
-            animate="animate"
-            whileHover="hover"
-            whileTap="tap"
-            variants={rClickables}
-            onClick={() =>
-              props.book.current.pageFlip().flip(numOfProjects + 2)
-            }
-            className="cursor-pointer"
-          >
-            About Me
-          </motion.p>
-          <Spacer />
-          <Box>
-            <Text> {numOfProjects + 1} </Text>
-          </Box>
-        </Flex>
-        <Flex>
-          <motion.p
-            initial="initial"
-            animate="animate"
-            whileHover="hover"
-            whileTap="tap"
-            variants={rClickables}
-            onClick={() =>
-              props.book.current.pageFlip().flip(numOfProjects + 3)
-            }
-            className="cursor-pointer"
-          >
-            Contact
-          </motion.p>
-          <Spacer />
-          <Box>
-            <Text> {numOfProjects + 2} </Text>
-          </Box>
-        </Flex>
+        
       </Stack>
     </Container>
   );
